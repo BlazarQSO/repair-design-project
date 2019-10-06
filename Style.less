@@ -1,0 +1,979 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+div, section {
+    border: 1px solid crimson;
+}
+.wrapper {
+    width: 1440px;
+    margin: 0 auto;
+
+    @media (max-width: 375px) {
+        width: 375px;
+    }
+}
+
+.header, .footer {
+    height: 83px;
+    display: flex;
+    background-color: #131313;
+
+    &--title {
+        font-family: FuturaDemiC;
+        font-size: 14px;
+        line-height: 16px;
+        text-transform: uppercase;
+        color: #E3B873;
+    }
+    &--number {
+        font-family: FuturaDemiC;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: right;
+        text-decoration-line: underline;
+        color: #E3B873;
+    }
+    &--btn {
+        background-color: #E3B873;
+        font-family: FuturaDemiC;
+        font-size: 13px;
+        line-height: 15px;
+        text-align: center;
+        text-transform: uppercase;        
+        color: #FFFFFF;
+    }
+    &--nav {
+        display: flex;
+        font-family: FuturaBookC;
+        font-size: 14px;
+        line-height: 16px;
+        color: #FFFFFF;
+        text-decoration-line: none;   
+    }
+    &--nav ul {
+        display: flex;     
+    }    
+    a {
+        text-decoration-line: none;   
+    }
+    &--nav-home {
+        color: #E3B873;        
+    }
+
+    @media (max-width: 375px) {
+        &--btn, &--nav {
+            display: none;
+        }        
+        &--title {
+            font-size: 12px;
+            line-height: 14px;
+        }
+        &--number {
+            font-size: 12px;
+            line-height: 14px;
+            text-align: right;
+            color: #FFFFFF;
+        }
+    }
+}
+
+.first_block {
+    height: 755px;
+    background-color: #131313;
+    display: flex;
+    font-family: FuturaDemiC;
+    font-size: 13px;
+    line-height: 15px;
+    text-align: center;
+    color: #FFFFFF;
+
+    &--aside{
+        width: 707px;
+        height: 82px;        
+        transform: rotate(-90deg);
+        font-family: FuturaDemiC;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        color: #E3B873;
+    }
+    &--section {
+        background-image: url('/source/images/block1/b1 - image.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &--section-title{
+        font-family: Yeseva One;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 40px;
+        line-height: 53px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+    &--section-text {
+        font-family: FuturaBookC;
+        font-size: 22px;
+        line-height: 30px;        
+        color: #FFFFFF;
+    }
+    &--section-name{
+        color: #E3B873;
+    }
+    &--section-btn_left {
+        background: #E3B873;
+        box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
+        border-radius: 2px;
+    }
+    &--section-btn_right{
+        border: 1px solid #FFFFFF;
+        background: none;
+        box-sizing: border-box;
+        border-radius: 2px;
+    }
+    &--scroll{
+        background-image: url('/source/images/block1/b1 - icon arrow.png');
+        background-repeat: no-repeat;
+        background-position: right; 
+        height: 97px;
+        width: 247px;
+        font-family: Yeseva One;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 19px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+    &--footer {
+        background-color: #131313;
+        height: 48px;
+        width: 1193px;
+    }
+
+    @media (max-width: 375px) {
+        &--scroll,  &--footer, &--aside {
+            display: none;
+        }
+    }
+}
+
+.second_block_completed {
+    height: 702px;
+    background-color: black;
+    display: flex;
+
+    &--section {
+        width: 593px;
+
+        &-text{
+            font-family: FuturaBookC;
+            font-size: 18px;
+            line-height: 29px;
+            color: #FFFFFF;
+        }
+        h2 {
+            font-family: Yeseva One;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 27px;
+            line-height: 37px;
+            letter-spacing: -0.07em;
+            text-transform: uppercase;
+            color: #E3B873;
+        }
+        h3 {
+            font-family: Yeseva One;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 25px;
+            text-transform: uppercase;
+            color: #E3B873;
+        }
+        &-info {
+            font-family: FuturaBookC;
+            font-size: 15px;
+            line-height: 20px;
+            color: #FFFFFF;
+        }
+        &-row1 {
+            display: flex;
+        }
+        &-row2 {
+            display: flex;
+        }
+        &-arrows {
+            background-image: url('/source/images/block2/b2 icon arrows.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 593px;
+            height: 30px;
+        }
+    }
+
+    &--r_section {
+        width: 847px;
+        height: 600px;
+
+        &-nav {
+            display: flex;
+            height: 50px;                        
+        }
+        &-nav li {
+            width: 250px;
+            font-family: Yeseva One;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 19px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.3);
+        }        
+        &-nav li:first-child { 
+            color: #E3B873;
+            text-decoration: underline;
+        }
+        &-imgs {
+            display: flex;
+
+            :first-child{
+                background-image: url('/source/images/block2/b2 img left.png');
+                background-repeat: no-repeat;       
+                background-size: cover;         
+                width: 600px;
+                height: 400px;
+            }
+            :last-child{
+                background-image: url('/source/images/block2/b2 img right.png');
+                background-repeat: no-repeat;       
+                background-size: cover;         
+                width: 220px;
+                height: 400px;
+                margin-left: 20px;
+            }
+        }
+    }
+
+    @media (max-width: 375px) {
+        flex-direction: column;
+
+        &--r_section {
+            &-nav {
+                display: none;
+            }
+        }
+    }
+}
+
+.third_block_control {
+    height: 1103px;
+    background-image: url('/source/images/block3/b3 left opasity5%.png'), url('/source/images/block3/b3 right opasity5%.png');
+    background-repeat: no-repeat;
+    background-size: 100px 100px, 100px 100px;
+    background-position: left, right;
+    /*разобраться как вставить bg images*/
+
+    background: -webkit-linear-gradient(top, black, black 40%, white 30%, white);
+    
+    h2 {
+        font-family: Yeseva One;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 28px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+    &--icon {        
+        background-image: url('/source/images/block3/b3 icon online control.png');        
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 160px;
+    }
+    &--player {
+        background-image: url('/source/images/block3/b3 player ellipse.png'), url('/source/images/block3/b3 player.png');        
+        background-repeat: no-repeat;
+        background-position: center, center;
+        height: 434px;
+        width: 817px;
+        margin: 0 auto;
+    }
+    &--text {
+        width: 681px;
+        margin: 0 auto;
+        font-family: FuturaBookC;
+        font-size: 20px;
+        line-height: 34px;
+        text-align: center;
+        color: #363636;
+    }
+    &--form {
+        width: 769px;
+        margin: 0 auto;
+
+        &-inputs{
+            display: flex;
+        }
+        &-inputs div{
+            display: flex;            
+            flex-direction: column;
+        }
+    }
+}
+
+.fourth_block_repair {
+    height: 1685px;
+    background-color: white;
+    /*mix-blend-mode: color-dodge; for background image*/
+
+    h2 {
+        font-family: Yeseva One;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 28px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #181818;
+    }   
+    &--icon {
+        background-image: url('/source/images/block4/b4 icon types of repair.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100px;
+    }
+    &--types {
+        display: flex;
+        width: 1236px;
+        margin: 0 auto;
+    }
+    &--types > div {
+        display: flex;
+        flex-direction: column;
+    }
+    &--types-img1 {
+        width: 300px;
+        height: 300px;
+        background-image: url('/source/images/block4/b4 img1.png');
+    }
+    &--types-img2 {
+        width: 300px;
+        height: 300px;
+        background-image: url('/source/images/block4/b4 img2.png');
+    }
+    &--types-img3 {
+        width: 300px;
+        height: 300px;
+        background-image: url('/source/images/block4/b4 img3.png');
+    }
+    
+    &--cell_measurer {
+        height: 725px;
+        width: 1338px;
+        background-image: url('/source/images/block4/b4 ellipse1.png'), url('/source/images/block4/b4 ellipse2.png'), url('/source/images/block4/b4 ellipse3.png'), url('/source/images/block4/b4 ellipse4.png'), url('/source/images/block4/b4 ellipse5.png'), url('/source/images/block4/b4 house.png');
+        background-repeat: no-repeat;
+        background-position: left;
+        display: flex;
+
+        ol {
+            margin-left: 300px;
+            margin-top: 200px;
+        }
+        ol li:first-child {
+            list-style-image: url(/source/images/block4/01.png);
+        }
+        ol li:nth-child(2) {
+            list-style-image: url(/source/images/block4/02.png);
+        }
+
+        &-form {
+            width: 506px;
+            height: 509px;
+            margin-top: 200px;
+            margin-right: 100px;
+
+            &-icon {
+                background-image: url('/source/images/block4/b4 icon-pay.png');
+                background-repeat: no-repeat;
+                height: 100px;
+
+                p {
+                    margin-left: 100px;
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 375px) { 
+        &--cell_measurer {
+            display: none;
+        }
+        &--types {
+            flex-direction: column;
+        }
+    }
+}
+
+.fifth_block_fantasies {
+    background-image: url('/source/images/block5/b5 bg-img.png');
+    background-position-y: top 123px;
+    background-repeat: no-repeat;        
+    height: 1018px;       
+    display: flex;
+    
+    &--nav {
+        width: 587px;
+        margin-top: 260px;
+    
+        &-title {
+            font-family: Yeseva One;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 27px;
+            line-height: 37px;
+            color: #E3B873;
+            text-transform: uppercase;
+        }
+            
+        &-item a {
+            font-family: Proxima Nova;
+            font-size: 20px;
+            line-height: 34px;        
+            color: #FFFFFF;
+        }
+        &-item a:hover {
+            font-family: Proxima Nova;
+            font-size: 20px;
+            line-height: 34px;        
+            color: #E3B873;
+        }
+    }
+
+    &--l_imgs {
+        width: 354px;
+        margin-top: 83px;
+    }
+    &--r_imgs {        
+        margin-left: 43px;
+        width: 354px;
+    }
+
+    @media (max-width: 375px) {  
+        &--nav-item {
+            display: none;
+        }
+        img {
+            display: none;
+        }
+        &--nav-title {
+            width: 375px;            
+            text-align: center;
+        }
+        &--l_imgs {
+            :first-child {
+                display: block;
+                position: absolute;
+                left: 0;
+                margin-top: 250px;
+                width: 300px;
+                height: 400px;
+            }
+        }
+    }
+}
+
+.sixth_block_design {
+    height: 1788px;
+    background-image: url('/source/images/block6/b6 bg.png');
+    background-position-y: top 579px;
+    background-repeat: no-repeat;
+    
+
+    &--title {
+        font-family: Yeseva One;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 28px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #181818;
+    }
+    &--icon {
+        background-image: url('/source/images/block6/b6 icon dising.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100px;
+    }
+    &--text {
+        width: 763px;
+        margin: 0 auto;
+        font-family: FuturaBookC;
+        font-size: 20px;
+        line-height: 27px;
+        text-align: center;
+        color: #363636;
+    }
+    
+    &--options {
+        &-types {
+            display: flex;
+            width: 1236px;
+            margin: 0 auto;
+
+            &-list1, &-list2, &-list3 {
+                background: white;
+            }
+
+            &-cost1, &-cost2, &-cost3 {
+                background-color: #E3B873;
+            }
+        }
+        &-types > div {
+            display: flex;
+            flex-direction: column;
+        }
+        &-types-img1 {
+            width: 300px;
+            height: 300px;
+            background-image: url('/source/images/block4/b4 img1.png');
+        }
+        &-types-img2 {
+            width: 300px;
+            height: 300px;
+            background-image: url('/source/images/block4/b4 img2.png');
+        }
+        &-types-img3 {
+            width: 300px;
+            height: 300px;
+            background-image: url('/source/images/block4/b4 img3.png');
+        }
+    }
+
+    &--work {
+        display: flex;
+
+        &-l_block {
+            width: 573px;
+
+            &-about {
+                font-family: FuturaDemiC;
+                font-size: 15px;
+                line-height: 21px;
+                text-transform: uppercase;
+                color: #FFFFFF;
+            }
+            &-title {
+                font-family: Yeseva One;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 27px;
+                line-height: 37px;
+                text-transform: uppercase;
+                color: #E3B873;
+            }
+            &-title2 {                
+                font-family: Yeseva One;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 15px;
+                line-height: 23px;
+                text-transform: uppercase;
+                color: #E3B873;
+            }
+            &-step {
+                
+            }
+            p {
+                font-family: FuturaBookC;
+                font-size: 15px;
+                line-height: 25px;
+                color: #FFFFFF; 
+            }
+            &-icon {                
+                margin: 0 auto;
+            }
+        }
+        &-r_block {
+            width: 766px;
+            
+            &-list {
+                display: flex;
+                flex-flow: wrap;
+
+                li {
+                    width: 191px;
+                    font-family: FuturaBookC;
+                    font-size: 15px;
+                    line-height: 18px;
+                    color: #FFFFFF;
+                    opacity: 0.5;
+                }
+                li:hover {
+                    opacity: 1;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 375px) {
+        &--work {
+            display: none;
+        }
+        &--options {
+
+            &-types {
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+.seventh_block_team {
+    height: 933px;
+    background-image: url('/source/images/block7/b6 bg.png');
+    background-repeat: no-repeat;
+    background-position-y: bottom 526px; 
+
+    &--title {
+        font-family: Yeseva One;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 28px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+    &--icon {
+        background-image: url('/source/images/block7/b7 icon.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100px;
+    }
+    &--text {
+        font-family: FuturaBookC;
+        font-size: 20px;
+        line-height: 27px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+    &--text2, &--text3 {
+        width: 558px;
+        margin: 0 auto;
+        font-family: FuturaBookC;
+        font-size: 20px;
+        line-height: 34px;
+        text-align: center;
+        color: #363636;
+    }
+    &--vect, &--vect2 {
+        width: 55px;
+        border: 2px solid #E3B873;
+        margin: 0 auto;
+        margin-top: 53px;
+    }
+    &--vect2 {
+        margin-top: 73px;
+    }
+    &--experts {
+        width: 1063px;
+        display: flex;
+        margin: 0 auto;
+
+        > div:first-child {
+            width: 272px;
+            background-image: url('/source/images/block7/b7 icon img 1.png'), url('/source/images/block7/b7 img 1.png');
+            background-repeat: no-repeat;
+            background-position: top left, top 50px left 50px;            
+            background-size: auto, 200px;
+        }   
+        &-descript {  
+            margin-top: 300px;
+            
+            :first-child {
+                background-color: white;
+                width: 160px;
+                margin: 0 auto;
+                font-family: Yeseva One;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 25px;
+                text-align: center;
+                color: #181818;
+            }
+            :nth-child(2) {
+                font-family: FuturaBookC;
+                font-size: 18px;
+                line-height: 26px;
+                text-align: center;
+                color: #959595;
+            }
+            :last-child {
+                height: 50px;
+                width: 160px;
+                margin: 0 auto;
+                background-color: #E3B873;
+                font-family: Yeseva One;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 13px;
+                line-height: 20px;
+                text-align: center;
+                text-transform: uppercase;
+                color: #FFFFFF;
+            }
+        }
+    }
+
+    @media (max-width: 375px) {
+        height: 1533px;
+        &--vect, &--vect2, &--text2, &--text3 {
+            display: none;
+        }
+        &--experts {
+            flex-direction: column;
+        }
+    }
+}
+
+.eighth_block_clients {
+    height: 642px;
+    background-color: #fdfdfd;
+
+    &--title {
+        font-family: Yeseva One;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 28px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #181818;
+    }
+    &--icon {
+        background-image: url('/source/images/block8/b8 icon.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100px;
+    }
+    &--text {
+        width: 376px;
+        font-family: FuturaBookC;
+        font-size: 20px;
+        line-height: 27px;
+        text-align: center;
+        color: #363636;
+        margin: 0 auto;
+    }
+
+    &--clients {
+        width: 1236px;
+        margin: 0 auto;
+        display: flex;
+
+        &-title {
+            display: flex;
+
+            &-avat1, &-avat2, &-avat3 {
+                background-image: url('/source/images/block8/b8 img 1.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 76px;
+                height: 76px;
+                border-radius: 50px;
+                margin-left: 20px;
+            }
+            &-avat2 {
+                background-image: url('/source/images/block8/b8 img 2.png');
+            }
+            &-avat3 {
+                background-image: url('/source/images/block8/b8 img 3.png');
+            }
+            &-name {
+                font-family: Yeseva One;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 23px;
+                color: #181818;
+                margin-left: 23px;
+                width: 150px;
+            }           
+        }
+         &-text {
+                font-family: FuturaBookC;
+                font-size: 15px;
+                line-height: 180%;
+                color: #959595;
+        }
+        &-data1 {
+            background-image: url('/source/images/block8/b8 icon img left.png');
+            background-repeat: no-repeat;
+            background-position: left 10px top 10px;
+            width: 130px;
+            height: 54px;
+            background-color:  #E3B873;
+            display: inline-block;
+            font-family: Yeseva One;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 17px;
+            line-height: 24px;
+            color: #FFFFFF;
+        }
+        &-data2 {
+            background-image: url('/source/images/block8/b8 icon img right.png');
+            background-repeat: no-repeat;
+            background-position: left 10px top 10px;
+            width: 164px;
+            height: 54px;
+            background-color:  #E3B873;            
+            display: inline-block;
+            margin-left: -2px;
+            font-family: Yeseva One;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 17px;
+            line-height: 24px;
+            color: #FFFFFF;         
+        }
+    }
+
+    @media (max-width: 375px) {
+        display: none;
+    }
+}
+
+.ninth_block_questions {
+    height: 1308px;
+    background-image: url('/source/images/block9/b9 bg-top left.png'), url('/source/images/block9/b9 bg-top right.png'), url('/source/images/block9/b9 bg-img.png');
+    background-repeat: no-repeat;
+    background-position:bottom 935px left 0, bottom 935px right, top 355px left 0px;
+    /*
+        для image background bottom
+        height: 954px;
+    */
+
+    &--any {
+        background-color: black;
+        width: 883px;
+        height: 445px;
+        margin: 0 auto;
+        margin-top: 132px;
+
+        &-title {
+            font-family: Yeseva One;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 28px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            margin-top: 30px;
+        }
+        &-form {
+            width: 520px;
+            margin: 0 auto;
+
+            label {
+                font-family: FuturaBookC;
+                font-size: 15px;
+                line-height: 20px;
+                color: rgba(255, 255, 255, 0.5);
+            }
+            &-info {
+                display: flex;
+            }
+            &-item {
+                display: flex;
+                flex-direction: column;
+
+                input {
+                    font-family: FuturaBookC;
+                    font-size: 18px;
+                    line-height: 24px;
+                    color: #FFFFFF;
+                    background-color: black;
+                    border: 0;
+                    border-bottom: 1px solid white;
+                }
+            }
+            &-check {
+                text-align: center;
+            }
+            &-btn {
+                width: 200px;
+                height: 51px;
+                background-color: #E3B873;                
+                font-family: FuturaDemiC;
+                font-size: 15px;
+                line-height: 26px;                
+                text-transform: uppercase;
+                color: #FFFFFF;                
+            }
+            &-center {
+                text-align: center;
+            }
+        }
+    }  
+    
+    &--title {
+        width: 580px;
+        margin: 0 auto;
+        font-family: Yeseva One;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 28px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #E3B873;
+        margin-top: 51px;
+    }  
+    &--icons {
+        background-image: url('/source/images/block9/b9 icon left.png'), url('/source/images/block9/b9 icon right.png');
+        background-repeat: no-repeat;
+        background-position: left, right;
+        height: 80px;
+        width: 70px;
+        margin: 0 auto;
+    }
+    &--map {
+        background-image: url('/source/images/block9/b9 map.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 925px;
+        height: 465px;
+        margin: 0 auto;
+    }
+
+    @media (max-width: 375px) {
+        &--map { 
+            width: 350px;
+            height: 300px;
+            background-size: cover;
+            img {
+                display: none;
+            }
+        }
+        &--any {
+            width: 375px;
+        }
+        &--title {
+            width: 375px;
+        }
+    }
+}
+
+.footer {
+    height: 133px;
+}
