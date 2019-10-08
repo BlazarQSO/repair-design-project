@@ -1,13 +1,9 @@
-﻿* {
-    margin: 0;
-    padding: 0;
-}
-
+﻿
 div, section {
     border: 1px solid crimson;
 }
 .wrapper {
-    width: 1440px;
+    max-width: 1440px;
     margin: 0 auto;
 
     @media (max-width: 375px) {
@@ -16,67 +12,157 @@ div, section {
 }
 
 .header, .footer {
-    height: 83px;
+    height: 83px;    
     display: flex;
+    align-items: center;
     background-color: #131313;
 
     &--title {
-        font-family: FuturaDemiC;
+        font-family: FuturaDemiC, Arial, sans-serif;
         font-size: 14px;
         line-height: 16px;
         text-transform: uppercase;
         color: #E3B873;
+        margin-left: 82px;
+        min-width: 180px;        
     }
+
     &--number {
-        font-family: FuturaDemiC;
+        font-family: FuturaDemiC, Arial, sans-serif;
         font-size: 14px;
         line-height: 16px;
         text-align: right;
-        text-decoration-line: underline;
-        color: #E3B873;
+        color: #E3B873;     
+        min-width: 126px;    
+        display: inline-block;      
+        margin-right: 45px;
     }
+
     &--btn {
         background-color: #E3B873;
-        font-family: FuturaDemiC;
+        font-family: FuturaDemiC, Arial, sans-serif;
         font-size: 13px;
         line-height: 15px;
         text-align: center;
-        text-transform: uppercase;        
+        text-transform: uppercase;
         color: #FFFFFF;
+        margin-right: 100px;
+        min-width: 161px;
+        height: 37px;
+        border: 0;        
     }
+
+    &--btn:hover {
+        color: crimson;
+        box-shadow: inset 3px 3px 2px crimson, inset -3px -3px 2px crimson;
+    }
+
     &--nav {
-        display: flex;
-        font-family: FuturaBookC;
+        border: 1px solid red;
+        width: 52%;                
+        margin-left: 6.5%;
+        margin-right: 4.5%;
+        font-family: FuturaBookC, Arial, sans-serif;
         font-size: 14px;
         line-height: 16px;
-        color: #FFFFFF;
-        text-decoration-line: none;   
+        color: #FFFFFF;        
+        text-decoration-line: none;        
+
+        a {
+            text-decoration-line: none;
+        }
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            min-width: 200px;
+        }
+
+        ul li {
+            flex-grow: 1;
+            text-align: center;            
+
+            a {
+                color: #FFFFFF;
+            }
+
+            a:hover {
+                color: rebeccapurple;
+            }
+        }
+        ul li:nth-child(2) {
+            a {
+                color: #252525;
+            }
+            a:hover {
+                color: rebeccapurple;
+            }
+        }
+        ul li:first-child {
+            text-align: left;            
+            
+            a {
+                color: #E3B873;                
+            }
+            a:hover {
+                color: rebeccapurple;
+            }
+        }        
+        ul li:last-child {
+                        
+        }
     }
-    &--nav ul {
-        display: flex;     
-    }    
-    a {
-        text-decoration-line: none;   
+
+    @media (max-width: 920px) {
+        &--title {
+            margin-left: 18px;
+        }
+        &--nav {
+            margin-left: 1%;
+            margin-right: 1%;
+        } 
+        &--btn {
+            margin-right: auto;
+        }
     }
-    &--nav-home {
-        color: #E3B873;        
+    @media (max-width: 780px) {     
+        &--btn {
+            display: none;
+        }
+    }
+    @media (max-width: 560px) {         
+        justify-content:space-between;
+      
+        &--nav {
+            display: none;
+        }
+        &--number {
+           margin: 0;              
+        }
     }
 
     @media (max-width: 375px) {
         &--btn, &--nav {
             display: none;
-        }        
+        }
+
         &--title {
             font-size: 12px;
             line-height: 14px;
         }
+
         &--number {
             font-size: 12px;
             line-height: 14px;
             text-align: right;
-            color: #FFFFFF;
+            margin-right: 18px;
+            color: #FFFFFF;           
         }
     }
+}
+
+.footer {
+    height: 133px;
 }
 
 .first_block {
@@ -974,6 +1060,3 @@ div, section {
     }
 }
 
-.footer {
-    height: 133px;
-}

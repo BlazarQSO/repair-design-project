@@ -3,7 +3,9 @@
 <head>
     <title></title>
 	<meta charset="utf-8" />
-    <link href="Style.less" rel="stylesheet/less" type="text/css" />
+    <link href="reset.css" rel="stylesheet" />
+    <link href="source/fonts/font-face.css" rel="stylesheet" />
+    <link href="Style.less" rel="stylesheet/less" type="text/css" />    
     <script src="less-v2.5.3.min.js"></script>
 </head>
 <body>
@@ -20,16 +22,16 @@
             </ul>
         </nav>
         <div>
-            <p class="header--number">
+            <a class="header--number" href="tel:+7-928-768-32-39">
                 +7 (928) 768-32-39
-            </p>
+            </a>
         </div>
         <form>
-            <input type="submit" class="header--btn" value="Request a call" />
+            <button class="header--btn">Request a call</button>
         </form>
     </header>
-    <main class="wrapper">
-        <div class="first_block">
+    <div class="wrapper">
+        <main class="first_block">
             <aside class="first_block--aside">
                 <div>
                     <p>INSTAGRAM</p>
@@ -52,7 +54,7 @@
                 <p>SCROLL DOWN</p>
             </div>
             <div class="first_block--footer"></div>
-        </div>
+        </main>
 
         <!--левая картинка полупрозрачная отступ -174 влево
         правая картинка полупрозрачаня отступ 176 вправа
@@ -486,7 +488,7 @@
                 <img src="/source/images/block9/b9 map.png" alt="" />
             </div>
         </section>
-    </main>
+    </div>
     <footer class="footer wrapper">
         <h1 class="footer--title">IC "Repair Design Project"</h1>
         <nav class="footer--nav">
