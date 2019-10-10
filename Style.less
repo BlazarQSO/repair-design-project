@@ -15,7 +15,8 @@ div, section {
     height: 83px;    
     display: flex;
     align-items: center;
-    background-color: #131313;
+    background-image: url('/source/images/block3/b3 bg.png');
+    background-size: cover;
 
     &--title {
         font-family: FuturaDemiC, Arial, sans-serif;
@@ -152,6 +153,8 @@ div, section {
 
     @media (max-width: 375px) {
         height: 57px;
+        background-image: none;
+        background-color: #181818;
 
         &--btn, &--nav {
             display: none;
@@ -178,7 +181,8 @@ div, section {
 
 .first_block {
     height: 755px;
-    background-color: #131313;
+    background-image: url('/source/images/block3/b3 bg.png');
+    background-size: cover;
     display: flex;   
     font-family: FuturaDemiC, Arial, sans-serif;
     font-size: 13px;
@@ -358,12 +362,15 @@ div, section {
     }
     @media (max-width: 375px) {
         height: 476px;
+        background-image: none;
+        background-color: #181818;
     }
 }
 
 .second_block_completed {
     height: 702px;
-    background-color: black;
+    background: url('/source/images/block3/b3 bg.png');
+    background-size: cover;
     display: flex;
 
     &--section {
@@ -617,6 +624,8 @@ div, section {
     }
 
     @media (max-width: 375px) {
+        background-image: none;
+        background-color: #181818;
         height: 727px;
         &--section { 
            margin-top: 36px;
@@ -644,16 +653,18 @@ div, section {
 
 .third_block_control {
     height: 1103px;
-    background-image: url('/source/images/block3/b3 left opasity5%.png'), url('/source/images/block3/b3 right opasity5%.png');
-    background-repeat: no-repeat;
-    background-size: 100px 100px, 100px 100px;
-    background-position: left, right;
-    /*разобраться как вставить bg images*/
+    background-image: url('/source/images/block3/b3 bg city left.png'), url('/source/images/block3/b3 bg city rigth.png'), url('/source/images/block3/b3 bg.png');
+    background-repeat: no-repeat;        
+    background-position-x: left, right, center;
+    background-position-y: bottom 733px, bottom 723px, top;
+    background-size: auto, auto, 100% 371px;
 
-    background: -webkit-linear-gradient(top, black, black 40%, white 30%, white);
-    
     h2 {
-        font-family: Yeseva One;
+        background-image: url('/source/images/block3/b3 icon online control.png');        
+        background-repeat: no-repeat;
+        background-position: bottom;
+        height: 67px;
+        font-family: Yeseva One, serif;
         font-style: normal;
         font-weight: normal;
         font-size: 20px;
@@ -662,12 +673,7 @@ div, section {
         text-transform: uppercase;
         color: #FFFFFF;
     }
-    &--icon {        
-        background-image: url('/source/images/block3/b3 icon online control.png');        
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 160px;
-    }
+
     &--player {
         background-image: url('/source/images/block3/b3 player ellipse.png'), url('/source/images/block3/b3 player.png');        
         background-repeat: no-repeat;
@@ -675,10 +681,21 @@ div, section {
         height: 434px;
         width: 817px;
         margin: 0 auto;
+        margin-top: 21px;
+    }
+    &--vector {                
+        background-image: url('/source/images/block3/b3 vector.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 3px;
+        width: 56px;
+        margin: 0 auto;
+        margin-top: 63px;
     }
     &--text {
         width: 681px;
         margin: 0 auto;
+        margin-top: 35px;
         font-family: FuturaBookC;
         font-size: 20px;
         line-height: 34px;
@@ -688,14 +705,232 @@ div, section {
     &--form {
         width: 769px;
         margin: 0 auto;
+        margin-top: 100px;
 
         &-inputs{
             display: flex;
+            width: 769px;
+            height: 51px;            
+            
+            div {
+                display: flex;            
+                flex-direction: column;
+                                
+                label {
+                    font-family: FuturaBookC;
+                    font-size: 15px;
+                    line-height: 20px;                    
+                    color: rgba(54, 54, 54, 0.5);
+                }
+                input {
+                    font-family: FuturaBookC;
+                    font-size: 18px;
+                    line-height: 24px;                    
+                    color: #363636;
+                    border: 0;
+                }               
+            }            
+            :first-child {
+                width: 289px;
+
+                input {
+                    background-image: url('/source/images/block3/b3 line left.png');
+                    background-position: left bottom;
+                    background-repeat: no-repeat;
+                }
+            }
+            :nth-child(2) {
+                width: 280px;
+
+                input {
+                    background-image: url('/source/images/block3/b3 line right.png');
+                    background-position: bottom;
+                    background-repeat: no-repeat;
+                }
+            }
+
+            button {
+                width: 200px;                
+                border: 0;
+                background: #E3B873;
+                box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
+                border-radius: 2px;
+                font-family: FuturaDemiC;
+                font-size: 15px;
+                line-height: 26px;
+                text-align: center;
+                text-transform: uppercase;                
+                color: #FFFFFF;
+            }
+            button:hover {
+                outline: 2px solid crimson;
+                cursor: pointer;
+                color: black;
+            }
         }
-        &-inputs div{
-            display: flex;            
-            flex-direction: column;
+        
+        &-check {
+            width: 300px;            
+            margin: 0 auto;
+            margin-top: 33px;
+            font-family: FuturaBookC;
+            font-size: 16px;
+            line-height: 22px;            
+            color: #181818;
+            display: flex;
+            align-items: center;
+
+            cursor: pointer;
+
+            input {
+                display: none;
+                &:checked + .third_block_control--form-check-box{
+                    background-color: #E3B873;
+
+                    &:after {
+                        content: '';                        
+                        position: absolute;
+                        width: 50%;
+                        height: 20%;
+                        border-left: 0px solid;
+                        border-bottom: 0px solid;
+                        border-color: white;
+                        transform: rotate(-45deg) translate3d(0,0,0);
+                        transform-origin: center center;
+                        transition: all 0.5s;
+                        margin-left: 4px;
+                        margin-top: 5px;
+                    }
+                }
+            }
+
+            &-box {
+                display: block;
+                float: left;
+                width: 18px;
+                height: 18px;
+                background-color: #E3B873;
+                margin-right: 5px;               
+                position: relative;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    width: 50%;
+                    height: 20%;
+                    border-left: 2px solid;
+                    border-bottom: 2px solid;
+                    border-color: white;
+                    transform: rotate(-45deg) translate3d(0,0,0);
+                    transform-origin: center center;
+                    transition: all 0.5s;
+                    margin-left: 4px;
+                    margin-top: 5px;
+                }
+            }
         }
+    }
+
+    @media (max-width: 850px){
+        height: 851px;
+        background-image: none;
+        background-image: url('/source/images/block3/b3 bg.png');
+        background-repeat: no-repeat;        
+        background-position-x: center;
+        background-position-y: top;
+        background-size: 100% 825px;
+
+        h2 {
+            height: 74px;
+            font-family: Yeseva One;            
+            font-size: 22px;
+            line-height: 30px;
+            text-align: center;
+            text-transform: uppercase;            
+            color: #FFFFFF;
+        }
+
+        &--player {
+            width: 340px;
+            height: 207px;
+            margin-top: 40px;
+        }
+
+        &--vector {
+            margin-top: 28px;
+        }
+        &--text {
+            margin-top: 22px;
+            width: 340px;
+            font-size: 14px;
+            line-height: 169.8%;
+            text-align: center;
+            color: #FFFFFF;
+        }
+        &--form {
+            margin: 0 auto;
+            margin-top: 35px;
+            width: 340px;
+            height: 311px;
+
+            &-inputs{
+                display: block;
+                width: 340px;
+                height: 311px;
+
+                div {
+                    label {
+                        color: rgba(255, 255, 255, 0.5);
+                    }   
+                }
+
+                :first-child {
+                    input {
+                        background-image: none;
+                        background-color: rgba(54, 54, 54, 0.0);
+                        background-image: url('/source/images/block3/b3 bg input.png');
+                        background-repeat: no-repeat;
+                        background-position: bottom;                        
+                        width: 340px;                        
+                        color: #FFFFFF;
+                        margin: 0;
+                    }
+                }
+                :nth-child(2) {
+                    input {
+                        background-image: none;
+                        background-color: rgba(54, 54, 54, 0.0);                        
+                        background-image: url('/source/images/block3/b3 bg input.png');
+                        background-repeat: no-repeat;
+                        background-position: bottom;                        
+                        color: #FFFFFF;
+                        width: 340px;                        
+                    }
+
+                    label {
+                        margin-top: 60px;
+                    }
+                }
+            }   
+            
+            button {
+                width: 340px;
+                height: 51px;
+                margin-top: 88px;
+            }  
+
+            &-check {
+                margin-top: -130px;
+                font-size: 16px;
+                line-height: 22px;
+                color: #FFFFFF;
+                margin-left: 0;
+            }
+        }
+    }
+
+    @media (max-width: 375px) {
+        
     }
 }
 

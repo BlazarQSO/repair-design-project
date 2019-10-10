@@ -54,10 +54,6 @@
                 <p>SCROLL DOWN</p>
             </div>
         </main>
-
-        <!--левая картинка полупрозрачная отступ -174 влево
-        правая картинка полупрозрачаня отступ 176 вправа
-        -->
         <div class="second_block_completed">
             <section class="second_block_completed--section">
                 <div class="second_block_completed--section-title">
@@ -106,32 +102,32 @@
             </div>
         </div>
         <section class="third_block_control">
-            <h2>ONLINE CONTROL</h2>
-            <div class="third_block_control--icon"></div>
+            <h2>ONLINE CONTROL</h2>            
             <div class="third_block_control--player"></div>
-            <div></div>
+            <div class="third_block_control--vector"></div>
             <p class="third_block_control--text">
                 At each facility, a camera is installed that broadcasts the progress of work on the clock.
                 At any time, you can go to our website and monitor the progress of work in your
-                apartment. You can watch the live broadcast from one of our facilities!
+                apartment. You can watch the live broadcast from one of our facilities! <br />
                 Leave a request below and you will receive a link to the broadcast.
             </p>
             <form class="third_block_control--form">
                 <div class="third_block_control--form-inputs">
                     <div>
                         <label>Name</label>
-                        <input type="text" value="What is your name:" />
+                        <input type="text" pattern="[a-zA-Z]*" value="What is your name:" required="required"/>
                     </div>
                     <div>
                         <label>Phone</label>
-                        <input type="text" value="Your phone number:" />
+                        <input type="text" pattern="\d{3}-\d{2}-\d{2}" value="Your phone number:" title="the format of the phone: 000-00-00" />
                     </div>
                     <button>SUMBMIT</button>
                 </div>
-                <div>
-                    <label>I agree to the processing of personal data</label>
-                    <input type="checkbox" />
-                </div>
+                <label class="third_block_control--form-check">
+                    <input type="checkbox" required />
+                    <span class="third_block_control--form-check-box"></span>
+                    I agree to the processing of personal data
+                </label>
             </form>
         </section>
         <section class="fourth_block_repair">
