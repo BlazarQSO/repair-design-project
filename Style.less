@@ -779,7 +779,6 @@ div, section {
             color: #181818;
             display: flex;
             align-items: center;
-
             cursor: pointer;
 
             input {
@@ -1047,51 +1046,233 @@ div, section {
         }
     
     }
-    
+    div {
+        border: 0;
+    }
     &--cell_measurer {
-        height: 725px;
-        width: 1338px;
+        height: 725px;                
         background-image: url('/source/images/block4/b4 ellipse1.png'), url('/source/images/block4/b4 ellipse2.png'), url('/source/images/block4/b4 ellipse3.png'), url('/source/images/block4/b4 ellipse4.png'), url('/source/images/block4/b4 ellipse5.png'), url('/source/images/block4/b4 house.png');
         background-repeat: no-repeat;
-        background-position: left;
+        background-position-x: left,     left 400px, left 462px, left 426px, left,      left;
+        background-position-y: top 55px, top 163px,  top 280px,  top 440px,  top 600px, top;
         display: flex;
+        margin-top: 124px;
 
-        ol {
-            margin-left: 300px;
-            margin-top: 200px;
-        }
-        ol li:first-child {
-            list-style-image: url(/source/images/block4/01.png);
-        }
-        ol li:nth-child(2) {
-            list-style-image: url(/source/images/block4/02.png);
+        ul {
+            width: 450px;
+            margin-left: 355px;
+            margin-top: 110px;            
+            
+            li {
+                list-style: none;
+                font-family: FuturaMediumC;
+                font-size: 18px;
+                line-height: 21px;                
+                color: #363636;                
+            }
+
+            :nth-child(1){
+                margin-top: 5px;
+                margin-left: 0;
+                a {
+                    display: inline-block;
+                    width: 364px;
+                    position: absolute;
+                    margin-left: 7px;
+                    margin-top: 3px;                
+                }
+            }
+            :nth-child(2){
+                margin-top: 57px;
+                margin-left: 75px;
+            }
+            :nth-child(3){
+                margin-top: 107px;
+                margin-left: 95px;
+            }
+            :nth-child(4){
+                margin-top: 107px;
+                margin-left: 35px;
+                a {
+                    display: inline-block;
+                    width: 184px;
+                    position: absolute;
+                    margin-left: 2px;
+                    margin-top: 6px;        
+                }
+                :nth-child(3) {
+                    margin-top: 26px;
+                    width: 230px;
+                }
+            }
+
+            span {            
+                color: white;
+                background: #E3B873;
+                display: inline-block;
+                text-align: center;
+                margin: 5px 10px;
+                line-height: 40px;
+                width: 42px;
+                height: 42px;
+                border-radius: 50%;
+                font-family: Yeseva One;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 18px;
+                color: #FFFFFF;
+            }
         }
 
-        &-form {
-            width: 506px;
+        &-r_section {            
+            width: 46%;
             height: 509px;
-            margin-top: 200px;
-            margin-right: 100px;
-
-            &-icon {
-                background-image: url('/source/images/block4/b4 icon-pay.png');
-                background-repeat: no-repeat;
-                height: 100px;
+            margin-top: 105px;
+            
+            
+            &-form {
+                width: 77%;
+                background: #131313;
+                height: 509px;
+                margin-right: 20%;
+                margin-left: 50px;
 
                 p {
-                    margin-left: 100px;
-                    margin-top: 30px;
+                    font-family: FuturaDemiC;
+                    font-size: 20px;
+                    line-height: 25px;
+                    text-align: center;                    
+                    color: #FFFFFF;                    
+                    width: 280px;
+                    margin: 0 auto;
+                    padding-top: 28px;
                 }
+                &-inputs {
+                    width: 80%;
+                    margin: 0 auto;
+                    margin-top: 40px;                    
+
+                    > div {
+                        display: flex;            
+                        flex-direction: column;
+                        width: 100%;
+                                    
+                        label {
+                            font-size: 15px;
+                            line-height: 20px;                                
+                            color: rgba(255, 255, 255, 0.5);
+                        }
+                        input {
+                            font-family: FuturaMediumC;
+                            font-size: 18px;
+                            line-height: 25px;
+                            color: #FFFFFF;                                              
+                            border: 0;
+                            background-color: rgba(0, 0, 0, 0);
+                        }               
+                    } 
+                   
+                    :first-child {                        
+                        input {
+                            background-image: url('/source/images/block4/b4 line input.png');
+                            background-position: left bottom;
+                            background-repeat: no-repeat;
+                        }
+                    }
+                    :nth-child(2) {   
+                        label {
+                            margin-top: 48px;
+                        }              
+                        input {
+                            background-image: url('/source/images/block4/b4 line input.png');
+                            background-position: bottom;
+                            background-repeat: no-repeat;
+                        }
+                    }
+                    :nth-child(3) {        
+                        label {
+                            margin-top: 48px;
+                        }                 
+                        input {
+                            background-image: url('/source/images/block4/b4 line input.png');
+                            background-position: bottom;
+                            background-repeat: no-repeat;
+                        }
+                    }      
+                    :nth-child(4) {                       
+                        label {
+                            margin: 16px 0 0 0;
+                            font-family: FuturaBookC;
+                            font-size: 16px;
+                            line-height: 22px;                        
+                            color: #FFFFFF;
+                        }
+                    }
+                    button {
+                        width: 213px;              
+                        height: 51px;  
+                        border: 0;
+                        background: #E3B873;
+                        box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
+                        border-radius: 2px;
+                        font-family: FuturaDemiC;
+                        font-size: 15px;
+                        line-height: 26px;
+                        text-align: center;
+                        text-transform: uppercase;                
+                        color: #FFFFFF;                        
+                        margin-top: 39px;
+                        float: right;
+                    }
+                    button:hover {
+                        outline: 2px solid crimson;
+                        cursor: pointer;
+                        color: black;
+                    }
+                }    
+                
+                &-icon {
+                    background-image: url('/source/images/block4/b4 icon-pay.png');
+                    background-repeat: no-repeat;
+                    background-position-y: top 26px;             
+                    height: 110px;
+                    width: 330px;
+                    margin-left: 65px;
+                    
+
+                    p {
+                        margin-left: 120px;                                                
+                        font-family: FuturaDemiC;
+                        font-size: 20px;
+                        line-height: 25px;                        
+                        color: #E3B873;                        
+                        text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15);
+                        padding-top: 45px;
+                    }
+                }                
             }
         }
     }
 
-    @media (max-width: 1150px){
+    @media (max-width: 1200px){
         &--types {
             width: 100%;
         }
+        &--cell_measurer {
+            margin-left: -150px;
+        }
     }
+    @media (max-width: 1050px){
+        &--cell_measurer {
+            margin-left: -300px;
 
+            &-r_section {
+                &-form {
+                    margin-left: 70px;
+                }
+            }
+        }
+    }
     @media (max-width: 850px){
         height: 2104px;
 
