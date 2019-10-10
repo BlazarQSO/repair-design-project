@@ -936,10 +936,15 @@ div, section {
 
 .fourth_block_repair {
     height: 1685px;
-    background-color: white;
-    /*mix-blend-mode: color-dodge; for background image*/
+    background-color: white;   
 
-    h2 {
+    &--title {
+        background-image: url('/source/images/block4/b4 icon types of repair.png');
+        background-repeat: no-repeat;
+        background-position: bottom;
+        height: 67px;
+        width: 250px;
+        margin: 0 auto;
         font-family: Yeseva One;
         font-style: normal;
         font-weight: normal;
@@ -949,35 +954,98 @@ div, section {
         text-transform: uppercase;
         color: #181818;
     }   
-    &--icon {
-        background-image: url('/source/images/block4/b4 icon types of repair.png');
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 100px;
-    }
+
     &--types {
         display: flex;
-        width: 1236px;
+        width: 86%;
+        height: 608px;
         margin: 0 auto;
-    }
-    &--types > div {
-        display: flex;
-        flex-direction: column;
-    }
-    &--types-img1 {
-        width: 300px;
-        height: 300px;
-        background-image: url('/source/images/block4/b4 img1.png');
-    }
-    &--types-img2 {
-        width: 300px;
-        height: 300px;
-        background-image: url('/source/images/block4/b4 img2.png');
-    }
-    &--types-img3 {
-        width: 300px;
-        height: 300px;
-        background-image: url('/source/images/block4/b4 img3.png');
+        margin-top: 31px;
+        border: 3px solid blue;       
+        justify-content: space-between;
+        
+        > div {            
+            width: 32%;              
+            height: 100%;
+            flex-direction: column;
+            position: relative;
+        }
+
+        &-list {
+            width: 84%;
+            margin: 0 auto;
+            background: #FFFFFF;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+            min-width: 236px;    
+            position: relative;     
+            margin-top: -128px;
+            height: 286px;
+
+            h3 {
+                font-family: Yeseva One;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 25px;                
+                color: #363636;
+                margin-left: 9%;
+                padding-top: 25px;
+            }
+
+            ul {
+                list-style-type: disc;
+                margin-left: 9%;
+                margin-top: 13px;
+            }
+
+            li {
+                font-family: FuturaBookC;
+                font-size: 15px;
+                line-height: 25px;                
+                color: #959595;
+            }
+
+            &-cost {
+                background: #E3B873;
+                width: 228px;
+                height: 54px;
+                font-family: Yeseva One;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 25px;
+                text-transform: uppercase;
+                color: #FFFFFF;            
+                text-align: center;
+                line-height: 55px;                
+                margin-top: 19px;           
+                box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);     
+            }
+          
+        }
+
+        &-img1 {
+            width: 100%;
+            height: 421px;
+            background-image: url('/source/images/block4/b4 img1.png');
+            background-repeat: no-repeat;
+            background-position: center;            
+        }
+        &-img2 {
+            width: 100%;
+            height: 421px;
+            background-image: url('/source/images/block4/b4 img2.png');
+            background-repeat: no-repeat;
+            background-position: center;              
+        }
+        &-img3 {
+            width: 100%;
+            height: 421px;            
+            background-image: url('/source/images/block4/b4 img3.png');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    
     }
     
     &--cell_measurer {
@@ -1018,12 +1086,97 @@ div, section {
         }
     }
 
-    @media (max-width: 375px) { 
+    @media (max-width: 1150px){
+        &--types {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 850px){
+        height: 2104px;
+
         &--cell_measurer {
             display: none;
         }
+
+        &--title {
+            margin-top: 58px;
+        }
+
         &--types {
             flex-direction: column;
+            width: 92%;
+            height: 1027px;            
+
+            > div {
+                width: 70%;
+                margin: 0 auto;
+                min-width: 340px;
+                margin-top: 85px;
+            }
+
+            :first-child {
+                margin-top: 0px;
+            }
+
+            &-img1, &-img2, &-img3 {                
+                background-size: cover;
+            }
+        }
+    }
+
+    @media (max-width: 375px) {         
+        height: 1710px;
+
+        &--title {
+            height: 71px;
+        }
+
+        &--types {
+            margin-top: 40px;
+            flex-direction: column;
+            
+            > div {
+                height: 484px;
+                margin-top: 75px;
+            }
+
+            &-list {
+                width: 270px;
+                height: 241px;
+                margin: 0;
+                margin-top: -130px;
+
+                h3 {
+                    padding-top: 20px;
+                    margin-left: 39px;
+                    font-size: 15px;
+                    line-height: 138.6%;
+                }
+
+                ul {
+                    margin-top: 10px;
+                }
+
+                li {
+                    margin-left: 28px;
+                    font-size: 13px;
+                    line-height: 169.8%;
+                    color: #959595;
+                }
+
+                &-cost {
+                    margin-top: 16px;
+                    width: 190px;
+                    height: 40px;
+                    font-size: 15px;
+                    line-height: 43px;
+                }
+            }
+
+            &-img1, &-img2, &-img3 {                
+                height: 340px;                                
+            }
         }
     }
 }
