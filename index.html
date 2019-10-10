@@ -207,15 +207,15 @@
                         <div class="fourth_block_repair--cell_measurer-r_section-form-inputs">
                             <div>
                                 <label>Name</label>
-                                <input type="text" value="What is your name:" />
+                                <input type="text" pattern="[a-zA-Z]*" value="What is your name:" required/>
                             </div>
                             <div>
                                 <label>Phone</label>
-                                <input type="text" value="Your phone number:" />
+                                <input type="text"  pattern="\d{3}-\d{2}-\d{2}" value="Your phone number:" title="the format of the phone: 000-00-00" required/>
                             </div>
                             <div>
                                 <label>Email</label>
-                                <input type="text" value="Your email" />
+                                <input type="email" value="Your email" placeholder="Enter your email" required/>
                             </div>
                             <div>
                                 <label class="third_block_control--form-check">
@@ -252,8 +252,11 @@
                 </nav>
             </div>
             <div class="fifth_block_fantasies--l_imgs">
-                <img src="source/images/block5/b5 img 1-1.png" alt="" />
+                <img src="source/images/block5/b5 img 1-1.png" alt="" />                
                 <img src="source/images/block5/b5 img 2-1.png" alt="" />
+                <img src="source/images/block5/b5 img 1-1 min.png" alt="" />
+                <div class="fifth_block_fantasies--l_imgs-l_cntrl"></div>
+                <div class="fifth_block_fantasies--l_imgs-r_cntrl"></div>
             </div>
             <div class="fifth_block_fantasies--r_imgs">
                 <img src="source/images/block5/b5 img 1-2.png" alt="" />
