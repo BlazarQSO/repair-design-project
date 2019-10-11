@@ -1743,17 +1743,33 @@ div, section {
                 font-size: 15px;
                 line-height: 21px;
                 text-transform: uppercase;
-                color: #FFFFFF;
+                color: #FFFFFF;                
+                margin-top: -30px;
+                margin-left: 17%;
             }
 
             &-title {
                 font-family: Yeseva One;
                 font-style: normal;
                 font-weight: normal;
+                width: 160px;
+                height: 66px;
                 font-size: 27px;
                 line-height: 37px;
                 text-transform: uppercase;
                 color: #E3B873;
+                margin-top: 7px;
+                margin-left: 17%;
+                display: inline-block;                
+            }
+
+            &-vector {
+                border: 1px solid #E3B873;
+                width: 92px;
+                height: 0px;
+                display: inline-block;
+                margin-left: 7%;
+                margin-bottom: 9px;
             }
 
             &-title2 {
@@ -1764,43 +1780,119 @@ div, section {
                 line-height: 23px;
                 text-transform: uppercase;
                 color: #E3B873;
+                width: 262px;
+                height: 42px;
+                margin-top: 22px;
+                margin-left: 17%;
             }
 
             &-step {
+                margin-top: 92px;
+                margin-left: 17%;
+                font-family: Yeseva One;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 25px;
+                text-transform: uppercase;                
+                color: #FFFFFF;
             }
 
-            p {
+            &-text {
                 font-family: FuturaBookC;
                 font-size: 15px;
                 line-height: 25px;
                 color: #FFFFFF;
+                margin-left: 17%;
+                margin-top: 16px;
+                width: 337px;
+                height: 222px;
+                :last-child {
+                    margin-top: 8px;
+                }
             }
 
             &-icon {
-                margin: 0 auto;
+                margin-left: 17%;
+                margin-top: 61px;
             }
         }
 
         &-r_block {
-            width: 766px;
+            margin-top: 60px;            
+            width: 60%;
+            border: 2px solid white;
 
-            &-list {
+            &-list1, &-list2 {
                 display: flex;
-                flex-flow: wrap;
+                flex-flow: wrap;              
+                justify-content: space-between;    
+                width: 88%;
 
-                li {
-                    width: 191px;
-                    font-family: FuturaBookC;
-                    font-size: 15px;
-                    line-height: 18px;
-                    color: #FFFFFF;
-                    opacity: 0.5;
+                > div {
+                    width: 130px;
+                    height: 71px;                                                 
+
+                    span {
+                        width: 20px;
+                        font-family: Yeseva One;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 15px;
+                        line-height: 21px;
+                        text-transform: uppercase;
+                        color: rgba(255, 255, 255, 0.5);
+                        border-bottom: 1px solid rgba(227, 184, 115, 0.3);
+                    }
+
+                    p {                    
+                        font-family: FuturaBookC;
+                        font-size: 15px;
+                        line-height: 18px;
+                        color: #FFFFFF;
+                        opacity: 0.5;
+                    }
+                }
+                
+                div:last-child {
+                    width: 105px; 
                 }
 
-                li:hover {
-                    opacity: 1;
+                > div:hover {
                     cursor: pointer;
+
+                    span {                        
+                        border-bottom: 1px solid #E3B873;                        
+                        color: rgba(255, 255, 255, 1);
+                    }
+
+                    p {
+                        opacity: 1;
+                    }
                 }
+            }
+
+            &-list1 {
+                &-first {
+                    span {                        
+                        border-bottom: 1px solid #E3B873 !important;
+                        color: rgba(255, 255, 255, 1) !important;
+                    }
+
+                    p {
+                        opacity: 1 !important;
+                    }
+                }
+            }
+
+            &-list2 {
+                margin-top: 36px;
+            }
+
+            &-img {
+                margin-top: 44px;
+                width: 765px;
+                height: 377px;
             }
         }
     }
@@ -1808,6 +1900,25 @@ div, section {
     @media (max-width: 1200px) {
         &--types {
             width: 100%;
+        }
+        &--work {
+            &-l_block {
+                &-about, &-title, &-icon,  
+                &-text, &-step, &-title2 {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+    @media (max-width: 1150px) {
+        &--work {
+            &-r_block {
+               &-img {
+                   margin-top: 43px;
+                   width: 490px;
+                   height: 240px;
+               }
+            }
         }
     }
 
@@ -1826,7 +1937,7 @@ div, section {
             font-size: 15px;
             line-height: 135.84%;
             color: #FFFFFF;
-        }
+        }        
     }
 
     @media (max-width: 850px) {
