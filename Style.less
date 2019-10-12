@@ -711,8 +711,7 @@ div, section {
     height: 1103px;
     background-image: url('/source/images/block3/b3 bg city left.png'), url('/source/images/block3/b3 bg city rigth.png'), url('/source/images/block3/b3 bg.png');
     background-repeat: no-repeat;
-    background-position-x: left, right, center;
-    background-position-y: bottom 733px, bottom 723px, top;
+    background-position: left bottom 733px, right bottom 723px, center top;
     background-size: auto, auto, 100% 371px;
 
     h2 {
@@ -899,8 +898,7 @@ div, section {
         background-image: none;
         background-image: url('/source/images/block3/b3 bg.png');
         background-repeat: no-repeat;
-        background-position-x: center;
-        background-position-y: top;
+        background-position: center top;
         background-size: 100% 825px;
 
         h2 {
@@ -1116,9 +1114,9 @@ div, section {
     &--cell_measurer {
         height: 725px;
         background-image: url('/source/images/block4/b4 ellipse1.png'), url('/source/images/block4/b4 ellipse2.png'), url('/source/images/block4/b4 ellipse3.png'), url('/source/images/block4/b4 ellipse4.png'), url('/source/images/block4/b4 ellipse5.png'), url('/source/images/block4/b4 house.png');
-        background-repeat: no-repeat;
-        background-position-x: left, left 400px, left 462px, left 426px, left, left;
-        background-position-y: top 55px, top 163px, top 280px, top 440px, top 600px, top;
+        background-repeat: no-repeat;        
+        background-position: left top 55px,        left 400px  top 163px, left 462px top 280px, 
+                             left 426px top 440px, left top 600px,        left top;
         display: flex;
         margin-top: 124px;
 
@@ -1222,6 +1220,8 @@ div, section {
                     width: 80%;
                     margin: 0 auto;
                     margin-top: 40px;
+                    display: flex;
+                    flex-direction: column;                
 
                     > div {
                         display: flex;
@@ -1299,8 +1299,8 @@ div, section {
                         text-align: center;
                         text-transform: uppercase;
                         color: #FFFFFF;
-                        margin-top: 39px;
-                        float: right;
+                        margin-top: 39px;     
+                        align-self: flex-end;                   
                     }
 
                     button:hover {
@@ -1313,7 +1313,7 @@ div, section {
                 &-icon {
                     background-image: url('/source/images/block4/b4 icon-pay.png');
                     background-repeat: no-repeat;
-                    background-position-y: top 26px;
+                    background-position: left top 26px;
                     height: 130px;
                     width: 330px;
                     margin-left: 65px;
@@ -1446,7 +1446,7 @@ div, section {
 
 .fifth_block_fantasies {
     background-image: url('/source/images/block5/b5 bg-img.png');
-    background-position-y: top 123px;
+    background-position: left top 123px;
     background-repeat: no-repeat;
     height: 1018px;
     display: flex;
@@ -1527,7 +1527,7 @@ div, section {
         background-image: none;
         background-image: url('/source/images/block5/b5 bg.png');
         background-size: cover;
-        background-position-y: top 266px;
+        background-position: left top 266px;
 
         &--nav {
             margin: 0 auto;
@@ -1566,9 +1566,8 @@ div, section {
                 border: 0;
                 background-color: #E3B873;
                 background-image: url('/source/images/block5/b5 arrow-left.png');
-                background-repeat: no-repeat;
-                background-position: center;
-                background-position-x: left 12px;
+                background-repeat: no-repeat;                
+                background-position: center left 12px;
                 border-radius: 50%;
                 position: absolute;
                 margin-top: -142px;
@@ -1578,7 +1577,7 @@ div, section {
             :nth-child(5) {
                 background-image: none;
                 background-image: url('/source/images/block5/b5 arrow-right.png');
-                background-position-x: left 16px;
+                background-position: center left 16px;
                 margin-left: 290px;
             }
         }
@@ -1598,7 +1597,7 @@ div, section {
 .sixth_block_design {
     height: 1788px;
     background-image: url('/source/images/block6/b6 bg.png');
-    background-position-y: top 579px;
+    background-position: center top 579px;
     background-repeat: no-repeat;
 
     &--title {
@@ -2062,12 +2061,17 @@ div, section {
 }
 
 .seventh_block_team {
-    height: 933px;
-    background-image: url('/source/images/block7/b6 bg.png');
+    height: 933px;    
+    background-image: url('/source/images/block7/b7 bg.png');
     background-repeat: no-repeat;
-    background-position-y: bottom 526px;
+    background-position: center bottom 526px;
+    border: 2px solid blue;
 
     &--title {
+        background-image: url('/source/images/block7/b7 icon.png');
+        background-repeat: no-repeat;
+        background-position: bottom;        
+        height: 75px;
         font-family: Yeseva One;
         font-style: normal;
         font-weight: normal;
@@ -2077,15 +2081,12 @@ div, section {
         text-transform: uppercase;
         color: #FFFFFF;
     }
-
-    &--icon {
-        background-image: url('/source/images/block7/b7 icon.png');
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 100px;
-    }
-
+    
     &--text {
+        margin: 0 auto;
+        margin-top: 26px;
+        width: 460px;
+        height: 63px;
         font-family: FuturaBookC;
         font-size: 20px;
         line-height: 27px;
@@ -2094,7 +2095,7 @@ div, section {
     }
 
     &--text2, &--text3 {
-        width: 558px;
+        width: 558px;        
         margin: 0 auto;
         font-family: FuturaBookC;
         font-size: 20px;
@@ -2102,12 +2103,14 @@ div, section {
         text-align: center;
         color: #363636;
     }
+    &--text2 {
+        margin-top: 15px;
+    }
 
-    &--vect, &--vect2 {
+    &--vect1, &--vect2 {
         width: 55px;
         border: 2px solid #E3B873;
-        margin: 0 auto;
-        margin-top: 53px;
+        margin: 0 auto;        
     }
 
     &--vect2 {
@@ -2115,25 +2118,42 @@ div, section {
     }
 
     &--experts {
-        width: 1063px;
+        width: 74%;
+        height: 493px;
         display: flex;
-        margin: 0 auto;
+        justify-content: space-between;
+        margin-left: 13%;
+        margin-top: 32px;
 
-        > div:first-child {
-            width: 272px;
+        > div:first-child,
+        > div:nth-child(2),
+        > div:nth-child(3) {
+            width: 307px;            
             background-image: url('/source/images/block7/b7 icon img 1.png'), url('/source/images/block7/b7 img 1.png');
             background-repeat: no-repeat;
-            background-position: top left, top 50px left 50px;
-            background-size: auto, 200px;
+            background-size: auto, 272px 350px;
+            background-position: left -20px top -20px, left 35px top 35px;
+        }
+        > div:nth-child(2){
+            background-image: url('/source/images/block7/b7 icon img 2.png'), url('/source/images/block7/b7 img 2.png');
+        }
+        > div:nth-child(3){
+            background-image: url('/source/images/block7/b7 icon img 3.png'), url('/source/images/block7/b7 img 3.png');
         }
 
-        &-descript {
-            margin-top: 300px;
-
-            :first-child {
-                background-color: white;
-                width: 160px;
-                margin: 0 auto;
+        &-descript,
+        &-descript2, 
+        &-descript3 {            
+            margin: 0 auto;
+            margin-top: 306px;
+            margin-left: 52px;
+            background-color: white;
+            width: 233px;
+            height: 134px;            
+            
+            :first-child {                                                
+                margin-top: 22px;
+                height: 21px;
                 font-family: Yeseva One;
                 font-style: normal;
                 font-weight: normal;
@@ -2149,12 +2169,14 @@ div, section {
                 line-height: 26px;
                 text-align: center;
                 color: #959595;
+                margin-top: 9px;
+                height: 17px;                
             }
 
             :last-child {
-                height: 50px;
-                width: 160px;
-                margin: 0 auto;
+                height: 43px;
+                width: 233px;                
+                margin-top: 23px;
                 background-color: #E3B873;
                 font-family: Yeseva One;
                 font-style: normal;
@@ -2162,8 +2184,105 @@ div, section {
                 font-size: 13px;
                 line-height: 20px;
                 text-align: center;
+                line-height: 42px;
                 text-transform: uppercase;
                 color: #FFFFFF;
+            }
+        }
+    }
+
+    @media (max-width: 1250px) {
+        &--experts {
+            margin-left: 0;
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 900px) {
+        &--experts {
+            margin-left: 0;
+            width: 100%;
+
+            > div:first-child,
+            > div:nth-child(2),
+            > div:nth-child(3) {                                
+                background-size: auto, 305px 358px;                                           
+                background-position: left -20px top -20px, left 0px top 35px;
+            }
+
+            &-descript,
+            &-descript2, 
+            &-descript3 {
+                margin-left: 15px;
+            }
+        }
+    }
+
+    @media (max-width: 850px) {
+        height: 1705px;
+        background-position: bottom;
+        background-size: cover;
+
+        &--title {
+            margin-top: 76px;
+            height: 68px;
+            font-size: 22px;
+            line-height: 138.6%;
+        }
+
+        &--text {
+            height: 42px;
+            width: 330px;
+            margin-top: 23px;
+            font-family: FuturaBookC;
+            font-size: 15px;
+            line-height: 20px;
+            text-align: center;
+        }
+
+        &--vect1, &--vect2,
+        &--text2, &--text3 {
+            display: none;
+        }
+
+        &--experts {
+            margin-left: 0;
+            margin-top: 37px;
+            width: 100%;
+            flex-direction: column;
+
+            > div:first-child,
+            > div:nth-child(2),
+            > div:nth-child(3) {               
+                background-image: url('/source/images/block7/b7 icon img 1.png'), url('/source/images/block7/b7 img 1 min.png');
+                background-repeat: no-repeat;
+                background-size: auto, 305px 358px;
+                background-position: left -20px top -20px, left 0px top 35px;                
+                width: 340px;
+                height: 449px;
+                margin: 0 auto;
+                margin-top: 54px;                
+            }
+            > div:nth-child(2){
+                background-image: url('/source/images/block7/b7 icon img 2.png'), url('/source/images/block7/b7 img 2 min.png');
+            }
+            > div:nth-child(3){
+                background-image: url('/source/images/block7/b7 icon img 3.png'), url('/source/images/block7/b7 img 3 min.png');
+            }
+            > div:first-child {
+                margin-top: 0px;
+            }
+            
+            &-descript,
+            &-descript2, 
+            &-descript3 {  
+                margin-left: 62px;
+                height: 137px;    
+                margin-top: 312px;
+
+                :last-child {
+                    margin-top: 26px;
+                }
             }
         }
     }
