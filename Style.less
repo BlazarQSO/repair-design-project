@@ -1634,8 +1634,7 @@ div, section {
         width: 86%;
         height: 735px;
         margin: 0 auto;
-        margin-top: 39px;
-        border: 3px solid blue;
+        margin-top: 39px;     
         justify-content: space-between;
 
         > div {
@@ -2219,7 +2218,7 @@ div, section {
     }
 
     @media (max-width: 850px) {
-        height: 1705px;
+        height: 2050px;
         background-position: bottom;
         background-size: cover;
 
@@ -2240,9 +2239,15 @@ div, section {
             text-align: center;
         }
 
-        &--vect1, &--vect2,
+        &--vect1 {
+            margin-top: 1000px;
+        }
         &--text2, &--text3 {
-            display: none;
+            width: 370px;
+            font-size: 15px;
+            line-height: 20px;
+            text-align: center;
+            color: #FFFFFF;
         }
 
         &--experts {
@@ -2257,7 +2262,7 @@ div, section {
                 background-image: url('/source/images/block7/b7 icon img 1.png'), url('/source/images/block7/b7 img 1 min.png');
                 background-repeat: no-repeat;
                 background-size: auto, 305px 358px;
-                background-position: left -20px top -20px, left 0px top 35px;                
+                background-position: left -20px top -20px, left 35px top 35px;                
                 width: 340px;
                 height: 449px;
                 margin: 0 auto;
@@ -2288,14 +2293,11 @@ div, section {
     }
 
     @media (max-width: 375px) {
-        height: 1533px;
-
-        &--vect, &--vect2, &--text2, &--text3 {
+        height: 1710px;    
+        
+        &--vect1, &--vect2,
+        &--text2, &--text3 {
             display: none;
-        }
-
-        &--experts {
-            flex-direction: column;
         }
     }
 }
@@ -2305,6 +2307,9 @@ div, section {
     background-color: #fdfdfd;
 
     &--title {
+        background-image: url('/source/images/block8/b8 icon.png');
+        background-repeat: no-repeat;
+        background-position: bottom;
         font-family: Yeseva One;
         font-style: normal;
         font-weight: normal;
@@ -2313,33 +2318,39 @@ div, section {
         text-align: center;
         text-transform: uppercase;
         color: #181818;
-    }
-
-    &--icon {
-        background-image: url('/source/images/block8/b8 icon.png');
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 100px;
+        height: 67px;
     }
 
     &--text {
         width: 376px;
+        height: 57px;
         font-family: FuturaBookC;
         font-size: 20px;
         line-height: 27px;
         text-align: center;
         color: #363636;
         margin: 0 auto;
+        margin-top: 24px;        
     }
 
     &--clients {
-        width: 1236px;
-        margin: 0 auto;
+        width: 86%;
+        height: 455px;
+        margin-left: 7%;
+        margin-top: 39px;
         display: flex;
+        justify-content: space-between;     
 
+        > div {
+            width: 30%;
+            min-width: 295px;
+            height: 428px;
+            background: #FFFFFF;
+            box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
+        }
         &-title {
-            display: flex;
-
+            display: flex;         
+            
             &-avat1, &-avat2, &-avat3 {
                 background-image: url('/source/images/block8/b8 img 1.png');
                 background-repeat: no-repeat;
@@ -2348,6 +2359,7 @@ div, section {
                 height: 76px;
                 border-radius: 50px;
                 margin-left: 20px;
+                margin-top: 24px;
             }
 
             &-avat2 {
@@ -2366,7 +2378,9 @@ div, section {
                 line-height: 23px;
                 color: #181818;
                 margin-left: 23px;
-                width: 150px;
+                width: 180px;    
+                height: 40px;                    
+                margin-top: 41px;
             }
         }
 
@@ -2375,12 +2389,16 @@ div, section {
             font-size: 15px;
             line-height: 180%;
             color: #959595;
+            width: 90%;
+            height: 221px;
+            margin-top: 18px;
+            margin-left: 20px;
         }
 
-        &-data1 {
+        &-data1 {           
             background-image: url('/source/images/block8/b8 icon img left.png');
             background-repeat: no-repeat;
-            background-position: left 10px top 10px;
+            background-position: left 17px top 11px;
             width: 130px;
             height: 54px;
             background-color: #E3B873;
@@ -2391,28 +2409,68 @@ div, section {
             font-size: 17px;
             line-height: 24px;
             color: #FFFFFF;
+            margin-top: 58px;
+            display: inline-flex;
+
+            span {
+                align-self: center;
+                margin-left: 65px;                
+            }
         }
 
         &-data2 {
             background-image: url('/source/images/block8/b8 icon img right.png');
             background-repeat: no-repeat;
-            background-position: left 10px top 10px;
+            background-position: left 17px top 9px;
             width: 164px;
             height: 54px;
             background-color: #E3B873;
             display: inline-block;
-            margin-left: -2px;
+            margin-left: -4px;
+            border-left: 1px solid white;
             font-family: Yeseva One;
             font-style: normal;
             font-weight: normal;
             font-size: 17px;
-            line-height: 24px;
+            line-height: 24px;            
             color: #FFFFFF;
+            margin-top: 58px;
+            display: inline-flex;
+
+            span {
+                align-self: center;
+                margin-left: 65px;                
+            }
         }
     }
 
-    @media (max-width: 375px) {
-        display: none;
+    @media (max-width: 1050px) {
+        &--clients {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+    @media (max-width: 900px) {
+        &--clients > div:first-child {            
+            display: none;
+        }
+        &--clients {
+            justify-content: space-around;
+        }
+    }
+     @media (max-width: 600px) {
+        &--clients > div:nth-child(2) {            
+            display: none;
+        }
+        &--clients {
+            justify-content: space-around;
+        }
+    }
+    @media (max-width: 375px) {       
+       &--title, &--text, &--clients {
+           display: none;
+       }                       
+       display: none;
     }
 }
 
@@ -2421,10 +2479,7 @@ div, section {
     background-image: url('/source/images/block9/b9 bg-top left.png'), url('/source/images/block9/b9 bg-top right.png'), url('/source/images/block9/b9 bg-img.png');
     background-repeat: no-repeat;
     background-position: bottom 935px left 0, bottom 935px right, top 355px left 0px;
-    /*
-        для image background bottom
-        height: 954px;
-    */
+
     &--any {
         background-color: black;
         width: 883px;
