@@ -482,40 +482,43 @@
         </section>     
         <section class="ninth_block_questions">
             <div class="ninth_block_questions--any">
-                <h2 class="ninth_block_questions--any-title">have any questions?</h2>
-                <form class="ninth_block_questions--any-form">
-                    <div class="ninth_block_questions--any-form-info">
-                        <div class="ninth_block_questions--any-form-item">
-                            <label>Name</label>
-                            <input type="text" value="What is your name:" />
+                <div>
+                    <h2 class="ninth_block_questions--any-title">have any questions?</h2>
+                    <form class="ninth_block_questions--any-form">
+                        <div class="ninth_block_questions--any-form-info">
+                            <div class="ninth_block_questions--any-form-info-item1">
+                                <label>Name</label>
+                                <input type="text" pattern="[a-zA-Z]*" value="What is your name:" required />
+                            </div>
+                            <div class="ninth_block_questions--any-form-info-item2">
+                                <label>Phone</label>
+                                <input type="text" pattern="\d{3}-\d{2}-\d{2}" value="Your phone number:" title="the format of the phone: 000-00-00" required" />
+                            </div>
                         </div>
-                        <div class="ninth_block_questions--any-form-item">
-                            <label>Phone</label>
-                            <input type="text" value="Your phone number:" />
+                        <div class="ninth_block_questions--any-form-item3">
+                            <label>Question</label>
+                            <input type="text" value="I want to know:" required />
                         </div>
-                    </div>
-                    <div class="ninth_block_questions--any-form-item">
-                        <label>Question</label>
-                        <input type="text" value="I want to know:" />
-                    </div>
-                    <div class="ninth_block_questions--any-form-check">
-                        <label>I agree to the processing of personal data</label>
-                        <input type="checkbox" checked />
-                    </div>
-                    <div class="ninth_block_questions--any-form-center">
-                        <input class="ninth_block_questions--any-form-btn" type="submit" value="SUBMIT" />
-                    </div>
-                </form>
+                        <div>
+                            <label class="ninth_block_questions--any-form-check">
+                                <input type="checkbox" required />
+                                <span class="ninth_block_questions--any-form-check-box"></span>
+                                I agree to the processing of personal data
+                            </label>
+                        </div>                     
+                        <input class="ninth_block_questions--any-form-btn" type="submit" value="SUBMIT" />                        
+                    </form>
+                </div>
             </div>
             <div class="ninth_block_questions--title">
                 <h2>
-                    Rostov-on-Don, Nansen St., 239 Shopping Center
-                    Decorum Tel +7 (928) 768 32 29
+                    Rostov-on-Don, Nansen St., 239 <span>Shopping Center
+                    Decorum</span> Tel +7 (928) 768 32 29
                 </h2>
                 <div class="ninth_block_questions--icons"></div>
             </div>
             <div class="ninth_block_questions--map">
-                <img src="/source/images/block9/b9 map.png" alt="" />
+                
             </div>
         </section>
     </div>
@@ -532,9 +535,9 @@
             </ul>
         </nav>
         <div>
-            <p class="footer--number">
+            <a class="footer--number" href="tel:+7-928-768-32-39">
                 +7 (928) 768-32-39
-            </p>
+            </a>
         </div>
         <form>
             <input type="submit" class="footer--btn" value="Request a call" />
