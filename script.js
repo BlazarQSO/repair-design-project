@@ -56,6 +56,18 @@
                     return () => playerPause(this.title);
                 }
             },
+            "btn-slider-fifth_block_fantasies-left": {
+                title: "btn-slider",
+                onClickHandler: function (e) {
+                    return () => sliderMoveLeftFifth("btn-slider-fifth_block_fantasies-left");
+                }
+            },
+            "btn-slider-fifth_block_fantasies-right": {
+                title: "btn-slider",
+                onClickHandler: function (e) {
+                    return () => sliderMoveRightFifth("btn-slider-fifth_block_fantasies-right");
+                }
+            },
         }
         
         // This is binding handlers to buttons.
@@ -163,6 +175,60 @@
             document.getElementById("video").pause();
             document.getElementById(id).style.opacity = "0";
             document.getElementById("btn-play-third_block_control").style.opacity = "1";
+        }
+
+        function sliderMoveLeftFifth(id) {
+            const slider = document.getElementById("fifth_block_fantasies-slider");
+            
+            switch (slider.classList[1]) {
+                case "first-position2": {
+                    slider.classList.remove("first-position2");
+                    slider.classList.add("fourth-position2");                    
+                    break;
+                }
+                case "second-position2": {
+                    slider.classList.remove("second-position2");
+                    slider.classList.add("first-position2");                    
+                    break;
+                }
+                case "third-position2": {
+                    slider.classList.remove("third-position2");
+                    slider.classList.add("second-position2");                    
+                    break;
+                }
+                case "fourth-position2": {
+                    slider.classList.remove("fourth-position2");
+                    slider.classList.add("third-position2");
+                    break;
+                }
+            }
+        }
+
+        function sliderMoveRightFifth(id) {
+            const slider = document.getElementById("fifth_block_fantasies-slider");
+
+            switch (slider.classList[1]) {
+                case "first-position2": {
+                    slider.classList.remove("first-position2");
+                    slider.classList.add("second-position2");
+                    break;
+                }
+                case "second-position2": {
+                    slider.classList.remove("second-position2");
+                    slider.classList.add("third-position2");
+                    break;
+                }
+                case "third-position2": {
+                    slider.classList.remove("third-position2");
+                    slider.classList.add("fourth-position2");
+                    break;
+                }
+                case "fourth-position2": {
+                    slider.classList.remove("fourth-position2");
+                    slider.classList.add("first-position2");
+                    break;
+                }
+            }
         }
     }
 })();
