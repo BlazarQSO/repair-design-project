@@ -14,21 +14,21 @@
         <h1 class="header--title">IC "Repair Design Project"</h1>
         <nav class="header--nav">
             <ul>
-                <li><a href="#" class="header--nav-home">HOME</a></li>
-                <li><a href="#">PROJECTS</a></li>
-                <li><a href="#">MEASUREMENT</a></li>
-                <li><a href="#">TEAM</a></li>
-                <li><a href="#">REVIEWS</a></li>
-                <li><a href="#">CONTACTS</a></li>
+                <li><a href="#" id="header-nav1">HOME</a></li>
+                <li><a href="#" id="header-nav2">PROJECTS</a></li>
+                <li><a href="#" id="header-nav3">MEASUREMENT</a></li>
+                <li><a href="#" id="header-nav4">TEAM</a></li>
+                <li><a href="#" id="header-nav5">REVIEWS</a></li>
+                <li><a href="#" id="header-nav6">CONTACTS</a></li>
             </ul>
         </nav>
         <div>
-            <a class="header--number" href="tel:+7-928-768-32-39">
+            <a class="header--number" href="tel:+7-928-768-32-39" id="header-tel">
                 +7 (928) 768-32-39
             </a>
         </div>
         <form>
-            <button class="header--btn">Request a call</button>
+            <button class="header--btn" id="header-btn">Request a call</button>
         </form>
     </header>
     <div class="wrapper">
@@ -47,11 +47,11 @@
                     cost of materials due to the organization of work 
                 </p>
                 <form>
-                    <input type="submit" class="first_block--section-btn_left" value="CALCULATE THE COST" />
-                    <input type="submit" class="first_block--section-btn_right" value="SUBMIT YOUR APPLICATION" />
+                    <input type="submit" id="first_block-btn1" class="first_block--section-btn_left" value="CALCULATE THE COST" />
+                    <input type="submit" id="first_block-btn2" class="first_block--section-btn_right" value="SUBMIT YOUR APPLICATION" />
                 </form>
             </section>
-            <div class="first_block--scroll">
+            <div class="first_block--scroll" id="first_block-scroll">
                 <p>SCROLL DOWN</p>
             </div>
         </main>
@@ -136,16 +136,16 @@
                 <div class="third_block_control--form-inputs">
                     <div>
                         <label>Name</label>
-                        <input type="text" pattern="[a-zA-Z]*" value="What is your name:" required="required"/>
+                        <input type="text" pattern="[a-zA-Z]*" id="third_block-name" value="What is your name:" required="required"/>
                     </div>
                     <div>
                         <label>Phone</label>
-                        <input type="text" pattern="\d{3}-\d{2}-\d{2}" value="Your phone number:" title="the format of the phone: 000-00-00" />
+                        <input type="text" pattern="\d{3}-\d{2}-\d{2}" id="third_block-phone" value="Your phone number:" title="the format of the phone: 000-00-00" />
                     </div>
-                    <button>SUMBMIT</button>
+                    <button id="third_block-btn">SUMBMIT</button>
                 </div>
                 <label class="third_block_control--form-check">
-                    <input type="checkbox" required />
+                    <input type="checkbox" required id="third_block-check"/>
                     <span class="third_block_control--form-check-box"></span>
                     I agree to the processing of personal data
                 </label>
@@ -228,24 +228,24 @@
                         <div class="fourth_block_repair--cell_measurer-r_section-form-inputs">
                             <div>
                                 <label>Name</label>
-                                <input type="text" pattern="[a-zA-Z]*" value="What is your name:" required/>
+                                <input type="text" pattern="[a-zA-Z]*" id="fourth_block-name" value="What is your name:" required/>
                             </div>
                             <div>
                                 <label>Phone</label>
-                                <input type="text"  pattern="\d{3}-\d{2}-\d{2}" value="Your phone number:" title="the format of the phone: 000-00-00" required/>
+                                <input type="text"  pattern="\d{3}-\d{2}-\d{2}" id="fourth_block-phone" value="Your phone number:" title="the format of the phone: 000-00-00" required/>
                             </div>
                             <div>
                                 <label>Email</label>
-                                <input type="email" value="Your email" placeholder="Enter your email" required/>
+                                <input type="email" value="Your email" id="fourth_block-email" placeholder="Enter your email" required/>
                             </div>
                             <div>
                                 <label class="third_block_control--form-check">
-                                    <input type="checkbox" required />
+                                    <input type="checkbox" required id="fourth_block-check"/>
                                     <span class="third_block_control--form-check-box"></span>
                                     I agree to the processing of personal data
                                 </label>
                             </div>
-                            <button>CALL THE MEASURER</button>
+                            <button id="fourth_block-btn">CALL THE MEASURER</button>
                         </div>
                     </form>
                     <div class="fourth_block_repair--cell_measurer-r_section-form-icon">
@@ -332,18 +332,18 @@
                     <div class="sixth_block_design--types-list3">
                         <h3>Full</h3>
                         <ul>
-                            <li>Measurement drawing</li>
-                            <li>Redevelopment</li>
-                            <li>Layout of furniture</li>
-                            <li>Plan of ceilings</li>
-                            <li>Floor Plan</li>
-                            <li>Electricians plan</li>
-                            <li>Lighting plan</li>
-                            <li>Wall reamers</li>
-                            <li>3D visualization</li>
-                            <li>Bill of materials</li>
-                            <li>Departure for a selection of materials</li>
-                            <li>Furniture selection</li>
+                            <li id="sixth_block-item1">Measurement drawing</li>
+                            <li id="sixth_block-item2">Redevelopment</li>
+                            <li id="sixth_block-item3">Layout of furniture</li>
+                            <li id="sixth_block-item4">Plan of ceilings</li>
+                            <li id="sixth_block-item5">Floor Plan</li>
+                            <li id="sixth_block-item6">Electricians plan</li>
+                            <li id="sixth_block-item7">Lighting plan</li>
+                            <li id="sixth_block-item8">Wall reamers</li>
+                            <li id="sixth_block-item9">3D visualization</li>
+                            <li id="sixth_block-item10">Bill of materials</li>
+                            <li id="sixth_block-item11">Departure for a selection of materials</li>
+                            <li id="sixth_block-item12">Furniture selection</li>
                         </ul>
                         <div class="sixth_block_design--types-list-cost">900 rub / m2</div>
                     </div>
@@ -534,34 +534,37 @@
                         <div class="ninth_block_questions--any-form-info">
                             <div class="ninth_block_questions--any-form-info-item1">
                                 <label>Name</label>
-                                <input type="text" pattern="[a-zA-Z]*" value="What is your name:" required />
+                                <input type="text" id="ninth_block-name" pattern="[a-zA-Z]*" value="What is your name:" required />
                             </div>
                             <div class="ninth_block_questions--any-form-info-item2">
                                 <label>Phone</label>
-                                <input type="text" pattern="\d{3}-\d{2}-\d{2}" value="Your phone number:" title="the format of the phone: 000-00-00" required" />
+                                <input type="text" id="ninth_block-phone" pattern="\d{3}-\d{2}-\d{2}" value="Your phone number:" title="the format of the phone: 000-00-00" required" />
                             </div>
                         </div>
                         <div class="ninth_block_questions--any-form-item3">
                             <label>Question</label>
-                            <input type="text" value="I want to know:" required />
+                            <input type="text" value="I want to know:" id="ninth_block-question" required />
                         </div>
                         <div>
                             <label class="ninth_block_questions--any-form-check">
-                                <input type="checkbox" required />
+                                <input type="checkbox" id="ninth_block-checkbox" required />
                                 <span class="ninth_block_questions--any-form-check-box"></span>
                                 I agree to the processing of personal data
                             </label>
                         </div>                     
-                        <input class="ninth_block_questions--any-form-btn" type="submit" value="SUBMIT" />                        
+                        <input id="ninth_block-btn" class="ninth_block_questions--any-form-btn" type="submit" value="SUBMIT" />                        
                     </form>
                 </div>
             </div>
             <div class="ninth_block_questions--title">
-                <h2>
+                <p>
                     Rostov-on-Don, Nansen St., 239 <span>Shopping Center
-                    Decorum</span> Tel +7 (928) 768 32 29
-                </h2>
-                <div class="ninth_block_questions--icons"></div>
+                    Decorum</span> <a href="tel:+7-928-768-32-39" id="ninth_block-tel">Tel +7 (928) 768 32 29</a>
+                </p>
+                <div class="ninth_block_questions--icons">
+                    <div class="ninth_block_questions--icons-left" id="social_network1"></div>
+                    <div class="ninth_block_questions--icons-right" id="social_network2"></div>
+                </div>
             </div>
             <div class="ninth_block_questions--map">
                 
@@ -572,21 +575,21 @@
         <h1 class="footer--title">IC "Repair Design Project"</h1>
         <nav class="footer--nav">
             <ul>
-                <li><a href="#" class="footer--nav-home">HOME</a></li>
-                <li><a href="#">PROJECTS</a></li>
-                <li><a href="#">MEASUREMENT</a></li>
-                <li><a href="#">TEAM</a></li>
-                <li><a href="#">REVIEWS</a></li>
-                <li><a href="#">CONTACTS</a></li>
+                <li><a href="#" id="footer-nav1">HOME</a></li>
+                <li><a href="#" id="footer-nav2">PROJECTS</a></li>
+                <li><a href="#" id="footer-nav3">MEASUREMENT</a></li>
+                <li><a href="#" id="footer-nav4">TEAM</a></li>
+                <li><a href="#" id="footer-nav5">REVIEWS</a></li>
+                <li><a href="#" id="footer-nav6">CONTACTS</a></li>
             </ul>
         </nav>
         <div>
-            <a class="footer--number" href="tel:+7-928-768-32-39">
+            <a class="footer--number" href="tel:+7-928-768-32-39" id="footer-tel">
                 +7 (928) 768-32-39
             </a>
         </div>
         <form>
-            <input type="submit" class="footer--btn" value="Request a call" />
+            <input type="submit" class="footer--btn" value="Request a call" id="footer-btn"/>
         </form>
     </footer>
 </body>
