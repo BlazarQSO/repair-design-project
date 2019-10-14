@@ -88,9 +88,9 @@
                 </div>
                 <div class="second_block_completed--section-arrows">
                     <button id="btn-slider-second_block-left"></button>
-                    <span id="btn-slider-second_block-cirlce1"></span>
-                    <span id="btn-slider-second_block-cirlce2"></span>
-                    <span id="btn-slider-second_block-cirlce3"></span>
+                    <span id="btn-slider-second_block-circle1"></span>
+                    <span id="btn-slider-second_block-circle2"></span>
+                    <span id="btn-slider-second_block-circle3"></span>
                     <button id="btn-slider-second_block-right"></button>
                 </div>
             </section>            
@@ -116,7 +116,15 @@
         </div>
         <section class="third_block_control">
             <h2>ONLINE CONTROL</h2>            
-            <div class="third_block_control--player"></div>
+            <div class="third_block_control--player">
+                <div class="third_block_control--player-play" id="btn-play-third_block_control"></div>
+                <div class="third_block_control--player-pause" id="btn-pause-third_block_control"></div>
+                <video poster="/source/images/block3/b3 player.png" id="video" autoplay>
+                    <source src="source/images/block3/video.mp4" type="video/mp4">                    
+                    <source src="source/images/block3/video.webm" type="video/webm">
+                    Your browser doesn't support HTML5 video tag.
+                </video>
+            </div>
             <div class="third_block_control--vector"></div>
             <p class="third_block_control--text">
                 At each facility, a camera is installed that broadcasts the progress of work on the clock.
@@ -267,13 +275,20 @@
             <div class="fifth_block_fantasies--l_imgs">
                 <img src="source/images/block5/b5 img 1-1.png" alt="" />                
                 <img src="source/images/block5/b5 img 2-1.png" alt="" />
-                <img src="source/images/block5/b5 img 1-1 min.png" alt="" />
-                <div class="fifth_block_fantasies--l_imgs-l_cntrl"></div>
-                <div class="fifth_block_fantasies--l_imgs-r_cntrl"></div>
             </div>
             <div class="fifth_block_fantasies--r_imgs">
                 <img src="source/images/block5/b5 img 1-2.png" alt="" />
                 <img src="source/images/block5/b5 img 2-2.png" alt="" />
+            </div>
+            <div class="fifth_block_fantasies--slider">
+                <div class="fifth_block_fantasies--slider-l_cntrl"></div>
+                <div class="fifth_block_fantasies--slider-r_cntrl"></div>
+                <div class="fifth_block_fantasies--slider-items first-position" id="fifth_block_fantasies-slider">
+                    <div class="fifth_block_fantasies--slider-items-img1"></div>
+                    <div class="fifth_block_fantasies--slider-items-img2"></div>
+                    <div class="fifth_block_fantasies--slider-items-img3"></div>
+                    <div class="fifth_block_fantasies--slider-items-img4"></div>
+                </div>
             </div>
         </section>
         <section class="sixth_block_design">

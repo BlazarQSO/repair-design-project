@@ -25,7 +25,37 @@
                 onClickHandler: function (e) {
                     return () => sliderMoveRigth();
                 }
-            }
+            },
+            "btn-slider-second_block-circle1": {
+                title: "btn-circle1",
+                onClickHandler: function (e) {
+                    return () => sliderMoveCircle("btn-circle1");
+                }
+            },
+            "btn-slider-second_block-circle2": {
+                title: "btn-circle2",
+                onClickHandler: function (e) {
+                    return () => sliderMoveCircle("btn-circle2");
+                }
+            },
+            "btn-slider-second_block-circle3": {
+                title: "btn-circle3",
+                onClickHandler: function (e) {
+                    return () => sliderMoveCircle("btn-circle3");
+                }
+            },
+            "btn-play-third_block_control": {
+                title: "btn-play-third_block_control",
+                onClickHandler: function (e) {
+                    return () => playerPlay(this.title);
+                }
+            },
+            "btn-pause-third_block_control": {
+                title: "btn-pause-third_block_control",
+                onClickHandler: function (e) {
+                    return () => playerPause(this.title);
+                }
+            },
         }
         
         // This is binding handlers to buttons.
@@ -40,23 +70,23 @@
                 case "first-position": {
                     slider.classList.remove("first-position");
                     slider.classList.add("second-position");
-                    document.getElementById("btn-slider-second_block-cirlce1").style.backgroundColor = "rgba(255, 255, 255, 0.3)";
-                    document.getElementById("btn-slider-second_block-cirlce2").style.backgroundColor = "rgba(255, 255, 255, 1)";
+                    document.getElementById("btn-slider-second_block-circle1").style.backgroundColor = "rgba(255, 255, 255, 0.3)";
+                    document.getElementById("btn-slider-second_block-circle2").style.backgroundColor = "rgba(255, 255, 255, 1)";
                     span.sty
                     break;
                 }
                 case "second-position": {
                     slider.classList.remove("second-position");
                     slider.classList.add("third-position");
-                    document.getElementById("btn-slider-second_block-cirlce2").style.backgroundColor = "rgba(255, 255, 255, 0.3)";
-                    document.getElementById("btn-slider-second_block-cirlce3").style.backgroundColor = "rgba(255, 255, 255, 1)";
+                    document.getElementById("btn-slider-second_block-circle2").style.backgroundColor = "rgba(255, 255, 255, 0.3)";
+                    document.getElementById("btn-slider-second_block-circle3").style.backgroundColor = "rgba(255, 255, 255, 1)";
                     break;
                 }
                 case "third-position": {
                     slider.classList.remove("third-position");
                     slider.classList.add("first-position");
-                    document.getElementById("btn-slider-second_block-cirlce3").style.backgroundColor = "rgba(255, 255, 255, 0.3)";
-                    document.getElementById("btn-slider-second_block-cirlce1").style.backgroundColor = "rgba(255, 255, 255, 1)";
+                    document.getElementById("btn-slider-second_block-circle3").style.backgroundColor = "rgba(255, 255, 255, 0.3)";
+                    document.getElementById("btn-slider-second_block-circle1").style.backgroundColor = "rgba(255, 255, 255, 1)";
                     break;
                 }
             }
@@ -88,6 +118,51 @@
                     break;
                 }
             }
+        }
+
+        function sliderMoveCircle(id) {
+            const slider = document.querySelector("#second_block-slider");
+            switch (id) {
+                case "btn-circle1": {
+                    slider.classList.remove("second-position");
+                    slider.classList.remove("third-position");
+                    slider.classList.add("first-position");
+                    document.getElementById("btn-slider-second_block-circle2").style.backgroundColor = "rgba(255, 255, 255, 0.3)";
+                    document.getElementById("btn-slider-second_block-circle3").style.backgroundColor = "rgba(255, 255, 255, 0.3)";
+                    document.getElementById("btn-slider-second_block-circle1").style.backgroundColor = "rgba(255, 255, 255, 1)";
+                    break;
+                }
+                case "btn-circle2": {
+                    slider.classList.remove("first-position");
+                    slider.classList.remove("third-position");
+                    slider.classList.add("second-position");
+                    document.getElementById("btn-slider-second_block-circle1").style.backgroundColor = "rgba(255, 255, 255, 0.3)";
+                    document.getElementById("btn-slider-second_block-circle3").style.backgroundColor = "rgba(255, 255, 255, 0.3)";
+                    document.getElementById("btn-slider-second_block-circle2").style.backgroundColor = "rgba(255, 255, 255, 1)";
+                    break;
+                }
+                case "btn-circle3": {
+                    slider.classList.remove("first-position");
+                    slider.classList.remove("second-position");
+                    slider.classList.add("third-position");
+                    document.getElementById("btn-slider-second_block-circle1").style.backgroundColor = "rgba(255, 255, 255, 0.3)";
+                    document.getElementById("btn-slider-second_block-circle2").style.backgroundColor = "rgba(255, 255, 255, 0.3)";
+                    document.getElementById("btn-slider-second_block-circle3").style.backgroundColor = "rgba(255, 255, 255, 1)";
+                    break;
+                }
+            }
+        }
+
+        function playerPlay(id) {            
+            document.getElementById("video").play();            
+            document.getElementById(id).style.opacity = "0";
+            document.getElementById("btn-pause-third_block_control").style.opacity = "1";
+        }
+
+        function playerPause(id) {
+            document.getElementById("video").pause();
+            document.getElementById(id).style.opacity = "0";
+            document.getElementById("btn-play-third_block_control").style.opacity = "1";
         }
     }
 })();
