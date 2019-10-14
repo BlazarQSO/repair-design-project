@@ -2,6 +2,9 @@
     window.onload = function () {
 
         let buttons = {
+
+            // second_block slider
+
             "btn-slider-second_block-left": {
                 title: "btn-left",
                 onClickHandler: function (e) {
@@ -44,6 +47,9 @@
                     return () => sliderMoveCircle("btn-circle3");
                 }
             },
+
+            // third_block_control video
+
             "btn-play-third_block_control": {
                 title: "btn-play-third_block_control",
                 onClickHandler: function (e) {
@@ -56,6 +62,9 @@
                     return () => playerPause(this.title);
                 }
             },
+
+            // fifth_block slider
+
             "btn-slider-fifth_block_fantasies-left": {
                 title: "btn-slider",
                 onClickHandler: function (e) {
@@ -66,6 +75,98 @@
                 title: "btn-slider",
                 onClickHandler: function (e) {
                     return () => sliderMoveRightFifth("btn-slider-fifth_block_fantasies-right");
+                }
+            },
+
+            // sixth_block slider
+
+            ////------left block arrows
+
+            "btn-slider-sixth_block_design-left": {
+                title: "btn-slider",
+                onClickHandler: function (e) {
+                    return () => sliderMoveLeftSixth("btn-slider-sixth_block_design-left");
+                }
+            },
+            "btn-slider-sixth_block_design-right": {
+                title: "btn-slider",
+                onClickHandler: function (e) {
+                    return () => sliderMoveRightSixth("btn-slider-sixth_block_design-right");
+                }
+            },
+            "btn-slider-sixth_block_design-circle1": {
+                title: "btn-slider",
+                onClickHandler: function (e) {
+                    return () => sliderDesignMoveItem("btn-slider-sixth_block_design-circle1");
+                }
+            },
+            "btn-slider-sixth_block_design-circle2": {
+                title: "btn-slider",
+                onClickHandler: function (e) {
+                    return () => sliderDesignMoveItem("btn-slider-sixth_block_design-circle2");
+                }
+            },
+            "btn-slider-sixth_block_design-circle3": {
+                title: "btn-slider",
+                onClickHandler: function (e) {
+                    return () => sliderDesignMoveItem("btn-slider-sixth_block_design-circle3");
+                }
+            },
+            "btn-slider-sixth_block_design-circle4": {
+                title: "btn-slider",
+                onClickHandler: function (e) {
+                    return () => sliderDesignMoveItem("btn-slider-sixth_block_design-circle4");
+                }
+            },
+            "btn-slider-sixth_block_design-circle5": {
+                title: "btn-slider",
+                onClickHandler: function (e) {
+                    return () => sliderDesignMoveItem("btn-slider-sixth_block_design-circle5");
+                }
+            },
+            "btn-slider-sixth_block_design-circle6": {
+                title: "btn-slider",
+                onClickHandler: function (e) {
+                    return () => sliderDesignMoveItem("btn-slider-sixth_block_design-circle6");
+                }
+            },
+
+            ////------right block numbered list of elements
+
+            "btn-slider-sixth_block_design1": {
+                title: "btn-slider",
+                onClickHandler: function (e) {
+                    return () => sliderDesignMoveItem("btn-slider-sixth_block_design1");
+                }
+            },
+            "btn-slider-sixth_block_design2": {
+                title: "btn-slider",
+                onClickHandler: function (e) {
+                    return () => sliderDesignMoveItem("btn-slider-sixth_block_design2");
+                }
+            },
+            "btn-slider-sixth_block_design3": {
+                title: "btn-slider",
+                onClickHandler: function (e) {
+                    return () => sliderDesignMoveItem("btn-slider-sixth_block_design3");
+                }
+            },
+            "btn-slider-sixth_block_design4": {
+                title: "btn-slider",
+                onClickHandler: function (e) {
+                    return () => sliderDesignMoveItem("btn-slider-sixth_block_design4");
+                }
+            },
+            "btn-slider-sixth_block_design5": {
+                title: "btn-slider",
+                onClickHandler: function (e) {
+                    return () => sliderDesignMoveItem("btn-slider-sixth_block_design5");
+                }
+            },
+            "btn-slider-sixth_block_design6": {
+                title: "btn-slider",
+                onClickHandler: function (e) {
+                    return () => sliderDesignMoveItem("btn-slider-sixth_block_design6");
                 }
             },
         }
@@ -226,6 +327,162 @@
                 case "fourth-position2": {
                     slider.classList.remove("fourth-position2");
                     slider.classList.add("first-position2");
+                    break;
+                }
+            }
+        }
+
+        function sliderDesignMoveItem(id) {
+            const slider = document.getElementById("sixth_block_design-slider");
+
+            let cirlces = document.querySelectorAll(".sixth_block_design--work-l_block-arrows span");            
+            for (let i = 0; i < cirlces.length; i++) {
+                cirlces[i].style.backgroundColor = "rgba(255, 255, 255, 0.3)";
+            }
+            
+            switch (id) {
+                case "btn-slider-sixth_block_design-circle1":
+                case "btn-slider-sixth_block_design1": {                    
+                    document.getElementById("btn-slider-sixth_block_design-circle1").style.backgroundColor = "rgba(255, 255, 255, 1)";
+                    let className = slider.classList[1].toString();
+                    slider.classList.remove(className);
+                    slider.classList.add("first-position3");
+                    break;
+                }
+                case "btn-slider-sixth_block_design-circle2":
+                case "btn-slider-sixth_block_design2": {
+                    document.getElementById("btn-slider-sixth_block_design-circle2").style.backgroundColor = "rgba(255, 255, 255, 1)";
+                    let className = slider.classList[1].toString();
+                    slider.classList.remove(className);
+                    slider.classList.add("second-position3");
+                    break;
+                }
+                case "btn-slider-sixth_block_design-circle3":
+                case "btn-slider-sixth_block_design3": {
+                    document.getElementById("btn-slider-sixth_block_design-circle3").style.backgroundColor = "rgba(255, 255, 255, 1)";
+                    let className = slider.classList[1].toString();
+                    slider.classList.remove(className);
+                    slider.classList.add("third-position3");
+                    break;
+                }
+                case "btn-slider-sixth_block_design-circle4":
+                case "btn-slider-sixth_block_design4": {
+                    document.getElementById("btn-slider-sixth_block_design-circle4").style.backgroundColor = "rgba(255, 255, 255, 1)";
+                    let className = slider.classList[1].toString();
+                    slider.classList.remove(className);
+                    slider.classList.add("fourth-position3");
+                    break;
+                }
+                case "btn-slider-sixth_block_design-circle5":
+                case "btn-slider-sixth_block_design5": {
+                    document.getElementById("btn-slider-sixth_block_design-circle5").style.backgroundColor = "rgba(255, 255, 255, 1)";
+                    let className = slider.classList[1].toString();
+                    slider.classList.remove(className);
+                    slider.classList.add("fifth-position3");
+                    break;
+                }
+                case "btn-slider-sixth_block_design-circle6":
+                case "btn-slider-sixth_block_design6": {
+                    document.getElementById("btn-slider-sixth_block_design-circle6").style.backgroundColor = "rgba(255, 255, 255, 1)";
+                    let className = slider.classList[1].toString();
+                    slider.classList.remove(className);
+                    slider.classList.add("sixth-position3");
+                    break;
+                }
+            }
+        }
+
+        function sliderMoveRightSixth(id) {
+            const slider = document.getElementById("sixth_block_design-slider");
+
+            let cirlces = document.querySelectorAll(".sixth_block_design--work-l_block-arrows span");
+            for (let i = 0; i < cirlces.length; i++) {
+                cirlces[i].style.backgroundColor = "rgba(255, 255, 255, 0.3)";
+            }
+            
+            switch (slider.classList[1]) {
+                case "first-position3": {                    
+                    slider.classList.remove("first-position3");
+                    slider.classList.add("second-position3");
+                    document.getElementById("btn-slider-sixth_block_design-circle2").style.backgroundColor = "rgba(255, 255, 255, 1)";
+                    break;
+                }
+                case "second-position3": {
+                    slider.classList.remove("second-position3");
+                    slider.classList.add("third-position3");
+                    document.getElementById("btn-slider-sixth_block_design-circle3").style.backgroundColor = "rgba(255, 255, 255, 1)";
+                    break;
+                }
+                case "third-position3": {
+                    slider.classList.remove("third-position3");
+                    slider.classList.add("fourth-position3");
+                    document.getElementById("btn-slider-sixth_block_design-circle4").style.backgroundColor = "rgba(255, 255, 255, 1)";
+                    break;
+                }
+                case "fourth-position3": {
+                    slider.classList.remove("fourth-position3");
+                    slider.classList.add("fifth-position3");
+                    document.getElementById("btn-slider-sixth_block_design-circle5").style.backgroundColor = "rgba(255, 255, 255, 1)";
+                    break;
+                }
+                case "fifth-position3": {
+                    slider.classList.remove("fifth-position3");
+                    slider.classList.add("sixth-position3");
+                    document.getElementById("btn-slider-sixth_block_design-circle6").style.backgroundColor = "rgba(255, 255, 255, 1)";
+                    break;
+                }
+                case "sixth-position3": {
+                    slider.classList.remove("sixth-position3");
+                    slider.classList.add("first-position3");
+                    document.getElementById("btn-slider-sixth_block_design-circle1").style.backgroundColor = "rgba(255, 255, 255, 1)";
+                    break;
+                }
+            }
+        }
+
+        function sliderMoveLeftSixth(id) {
+            const slider = document.getElementById("sixth_block_design-slider");
+
+            let cirlces = document.querySelectorAll(".sixth_block_design--work-l_block-arrows span");
+            for (let i = 0; i < cirlces.length; i++) {
+                cirlces[i].style.backgroundColor = "rgba(255, 255, 255, 0.3)";
+            }
+
+            switch (slider.classList[1]) {
+                case "first-position3": {
+                    slider.classList.remove("first-position3");
+                    slider.classList.add("sixth-position3");
+                    document.getElementById("btn-slider-sixth_block_design-circle6").style.backgroundColor = "rgba(255, 255, 255, 1)";
+                    break;
+                }
+                case "sixth-position3": {
+                    slider.classList.remove("sixth-position3");
+                    slider.classList.add("fifth-position3");
+                    document.getElementById("btn-slider-sixth_block_design-circle5").style.backgroundColor = "rgba(255, 255, 255, 1)";
+                    break;
+                }
+                case "fifth-position3": {
+                    slider.classList.remove("fifth-position3");
+                    slider.classList.add("fourth-position3");
+                    document.getElementById("btn-slider-sixth_block_design-circle4").style.backgroundColor = "rgba(255, 255, 255, 1)";
+                    break;
+                }
+                case "fourth-position3": {
+                    slider.classList.remove("fourth-position3");
+                    slider.classList.add("third-position3");
+                    document.getElementById("btn-slider-sixth_block_design-circle3").style.backgroundColor = "rgba(255, 255, 255, 1)";
+                    break;
+                }
+                case "third-position3": {
+                    slider.classList.remove("third-position3");
+                    slider.classList.add("second-position3");
+                    document.getElementById("btn-slider-sixth_block_design-circle2").style.backgroundColor = "rgba(255, 255, 255, 1)";
+                    break;
+                }
+                case "second-position3": {
+                    slider.classList.remove("second-position3");
+                    slider.classList.add("first-position3");
+                    document.getElementById("btn-slider-sixth_block_design-circle1").style.backgroundColor = "rgba(255, 255, 255, 1)";
                     break;
                 }
             }
