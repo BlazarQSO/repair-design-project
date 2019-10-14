@@ -6,6 +6,7 @@
     <link href="reset.css" rel="stylesheet" />
     <link href="source/fonts/font-face.css" rel="stylesheet" />
     <link href="Style.less" rel="stylesheet/less" type="text/css" />    
+    <script src="script.js"></script>
     <script src="less-v2.5.3.min.js"></script>
 </head>
 <body>
@@ -85,7 +86,13 @@
                         <p>Upon request</p>
                     </div>
                 </div>
-                <div class="second_block_completed--section-arrows"></div>
+                <div class="second_block_completed--section-arrows">
+                    <button id="btn-slider-second_block-left"></button>
+                    <span id="btn-slider-second_block-cirlce1"></span>
+                    <span id="btn-slider-second_block-cirlce2"></span>
+                    <span id="btn-slider-second_block-cirlce3"></span>
+                    <button id="btn-slider-second_block-right"></button>
+                </div>
             </section>            
             <div class="second_block_completed--r_section">
                 <nav>
@@ -95,9 +102,15 @@
                         <li><a hrev="#">Rostov-on-Don Patriotic</a></li>
                     </ul>
                 </nav>
-                <div class="second_block_completed--r_section-imgs">
-                    <div></div>
-                    <div></div>
+                <div class="second_block_completed--r_section-l_btn" id="btn-slider-second_block-left2"></div>
+                <div class="second_block_completed--r_section-r_btn" id="btn-slider-second_block-right2"></div>
+                <div>
+                    <div class="second_block_completed--r_section-slider first-position" id="second_block-slider">
+                        <div class="second_block_completed--r_section-slider-img1"></div>
+                        <div class="second_block_completed--r_section-slider-img2"></div>
+                        <div class="second_block_completed--r_section-slider-img3"></div>
+                        <div class="second_block_completed--r_section-slider-img1"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -376,7 +389,7 @@
                             <p>delivery of works</p>
                         </div>
                     </div>
-                    <img class="sixth_block_design--work-r_block-img" src="/source/images/block6/b6 img.png" alt="" />
+                    <div class="sixth_block_design--work-r_block-img"></div>
                 </div>
             </section>            
         </section>        
