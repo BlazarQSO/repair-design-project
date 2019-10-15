@@ -9,17 +9,17 @@
     <script src="script.js"></script>
     <script src="less-v2.5.3.min.js"></script>
 </head>
-<body>
+<body class="body">
     <header class="header wrapper">
         <h1 class="header--title">IC "Repair Design Project"</h1>
         <nav class="header--nav">
             <ul>
                 <li><a href="#" id="header-nav1">HOME</a></li>
-                <li><a href="#" id="header-nav2">PROJECTS</a></li>
-                <li><a href="#" id="header-nav3">MEASUREMENT</a></li>
-                <li><a href="#" id="header-nav4">TEAM</a></li>
-                <li><a href="#" id="header-nav5">REVIEWS</a></li>
-                <li><a href="#" id="header-nav6">CONTACTS</a></li>
+                <li><a href="#project" id="header-nav2">PROJECTS</a></li>
+                <li><a href="#measurement" id="header-nav3">MEASUREMENT</a></li>
+                <li><a href="#team" id="header-nav4">TEAM</a></li>
+                <li><a href="#reviews" id="header-nav5">REVIEWS</a></li>
+                <li><a href="#contacts" id="header-nav6">CONTACTS</a></li>
             </ul>
         </nav>
         <div>
@@ -55,7 +55,7 @@
                 <p>SCROLL DOWN</p>
             </div>
         </main>
-        <div class="second_block_completed">
+        <div class="second_block_completed" id="project">
             <section class="second_block_completed--section">
                 <div class="second_block_completed--section-title">
                     <h2>Completed projects</h2>                    
@@ -119,7 +119,7 @@
             <div class="third_block_control--player">
                 <div class="third_block_control--player-play" id="btn-play-third_block_control"></div>
                 <div class="third_block_control--player-pause" id="btn-pause-third_block_control"></div>
-                <video poster="/source/images/block3/b3 player.png" id="video" autoplay>
+                <video poster="/source/images/block3/b3 player.png" id="video">
                     <source src="source/images/block3/video.mp4" type="video/mp4">                    
                     <source src="source/images/block3/video.webm" type="video/webm">
                     Your browser doesn't support HTML5 video tag.
@@ -145,13 +145,13 @@
                     <button id="third_block-btn">SUMBMIT</button>
                 </div>
                 <label class="third_block_control--form-check">
-                    <input type="checkbox" required id="third_block-check"/>
+                    <input type="checkbox" id="third_block-check" required checked="checked"/>
                     <span class="third_block_control--form-check-box"></span>
                     I agree to the processing of personal data
                 </label>
             </form>
         </section>
-        <section class="fourth_block_repair">
+        <section class="fourth_block_repair" id="measurement">
             <h2 class="fourth_block_repair--title">Types of Repair</h2>            
             <div class="fourth_block_repair--types">
                 <div>
@@ -239,9 +239,9 @@
                                 <input type="email" value="Your email" id="fourth_block-email" placeholder="Enter your email" required/>
                             </div>
                             <div>
-                                <label class="third_block_control--form-check">
+                                <label class="fourth_block_repair--cell_measurer-r_section-form-inputs-check">
                                     <input type="checkbox" required id="fourth_block-check"/>
-                                    <span class="third_block_control--form-check-box"></span>
+                                    <span class="fourth_block_repair--cell_measurer-r_section-form-inputs-check-box"></span>
                                     I agree to the processing of personal data
                                 </label>
                             </div>
@@ -426,7 +426,7 @@
                 </div>
             </section>            
         </section>        
-        <section class="seventh_block_team">
+        <section class="seventh_block_team" id="team">
             <h2 class="seventh_block_team--title">our team</h2>            
             <p class="seventh_block_team--text">
                 Our team has helped to become happier for more than
@@ -466,7 +466,7 @@
                 out work corresponding to his specialty.
             </p>
         </section>
-        <section class="eighth_block_clients">
+        <section class="eighth_block_clients" id="reviews">
             <h2 class="eighth_block_clients--title">our clients</h2>
             <p class="eighth_block_clients--text">80% of our customers recommend us to their friends and family.</p>
             <div class="eighth_block_clients--clients">
@@ -526,7 +526,7 @@
                 </div>
             </div>
         </section>     
-        <section class="ninth_block_questions">
+        <section class="ninth_block_questions" id="contacts">
             <div class="ninth_block_questions--any">
                 <div>
                     <h2 class="ninth_block_questions--any-title">have any questions?</h2>
@@ -547,12 +547,12 @@
                         </div>
                         <div>
                             <label class="ninth_block_questions--any-form-check">
-                                <input type="checkbox" id="ninth_block-checkbox" required />
+                                <input type="checkbox" checked="checked" id="ninth_block-checkbox" required />
                                 <span class="ninth_block_questions--any-form-check-box"></span>
                                 I agree to the processing of personal data
                             </label>
-                        </div>                     
-                        <input id="ninth_block-btn" class="ninth_block_questions--any-form-btn" type="submit" value="SUBMIT" />                        
+                        </div>                        
+                        <input id="ninth_block-btn" class="ninth_block_questions--any-form-btn" type="submit" value="SUBMIT" />
                     </form>
                 </div>
             </div>
@@ -575,12 +575,12 @@
         <h1 class="footer--title">IC "Repair Design Project"</h1>
         <nav class="footer--nav">
             <ul>
-                <li><a href="#" id="footer-nav1">HOME</a></li>
-                <li><a href="#" id="footer-nav2">PROJECTS</a></li>
-                <li><a href="#" id="footer-nav3">MEASUREMENT</a></li>
-                <li><a href="#" id="footer-nav4">TEAM</a></li>
-                <li><a href="#" id="footer-nav5">REVIEWS</a></li>
-                <li><a href="#" id="footer-nav6">CONTACTS</a></li>
+                <li><a href="#" id="header-nav1">HOME</a></li>
+                <li><a href="#project" id="header-nav2">PROJECTS</a></li>
+                <li><a href="#measurement" id="header-nav3">MEASUREMENT</a></li>
+                <li><a href="#team" id="header-nav4">TEAM</a></li>
+                <li><a href="#reviews" id="header-nav5">REVIEWS</a></li>
+                <li><a href="#contacts" id="header-nav6">CONTACTS</a></li>
             </ul>
         </nav>
         <div>

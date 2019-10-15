@@ -1,4 +1,45 @@
-﻿.wrapper {
+﻿.futuraDemiC-font(@color: #E3B873, @font-size: 14px, @line-height: 16px) {
+    font-family: FuturaDemiC, Arial, sans-serif;
+    color: @color;
+    font-size: @font-size;
+    line-height: @line-height;
+}
+
+.futuraBookC-font(@color: #E3B873, @font-size: 14px, @line-height: 16px) {
+    font-family: FuturaBookC, Arial, sans-serif; 
+    color: @color;
+    font-size: @font-size;
+    line-height: @line-height;
+}
+
+.yesevaOne-font(@color: #E3B873, @font-size: 14px, @line-height: 16px) {
+    font-family: Yeseva One, serif;
+    color: @color;
+    font-size: @font-size;
+    line-height: @line-height;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.futuraMediumC-font(@color: #E3B873, @font-size: 14px, @line-height: 16px) {
+    font-family: FuturaMediumC, Arial, sans-serif;    
+    color: @color;
+    font-size: @font-size;
+    line-height: @line-height;
+}
+
+.proximaNova-font(@color: #E3B873, @font-size: 14px, @line-height: 16px) {
+    font-family: Proxima Nova, Arial, sans-serif;    
+    color: @color;
+    font-size: @font-size;
+    line-height: @line-height;
+}
+
+.body {
+    background-color: bisque;
+}
+
+.wrapper {
     max-width: 1440px;
     margin: 0 auto;
 
@@ -12,37 +53,28 @@
     display: flex;
     align-items: center;
     background-image: url('/source/images/block3/b3 bg.png');
-    background-size: cover;
+    background-size: 101%;
 
     &--title {
-        font-family: FuturaDemiC, Arial, sans-serif;
-        font-size: 14px;
-        line-height: 16px;
-        text-transform: uppercase;
-        color: #E3B873;
+        .futuraDemiC-font;
+        text-transform: uppercase;        
         margin-left: 82px;
         min-width: 180px;
     }
 
     &--number {
-        font-family: FuturaDemiC, Arial, sans-serif;
-        font-size: 14px;
-        line-height: 16px;
-        text-align: right;
-        color: #E3B873;
+        .futuraDemiC-font;   
+        text-align: right;        
         min-width: 126px;
         display: inline-block;
         margin-right: 45px;
     }
 
     &--btn {
-        background-color: #E3B873;
-        font-family: FuturaDemiC, Arial, sans-serif;
-        font-size: 13px;
-        line-height: 15px;
+        .futuraDemiC-font(#FFFFFF, 13px, 15px);        
+        background-color: #E3B873;        
         text-align: center;
-        text-transform: uppercase;
-        color: #FFFFFF;
+        text-transform: uppercase;        
         margin-right: 100px;
         min-width: 161px;
         height: 37px;
@@ -63,17 +95,15 @@
     }
 
     &--nav {
+        .futuraBookC-font(#FFFFFF);
         width: 52%;
         margin-left: 6.5%;
-        margin-right: 4.5%;
-        font-family: FuturaBookC, Arial, sans-serif;
-        font-size: 14px;
-        line-height: 16px;
-        color: #FFFFFF;
+        margin-right: 4.5%; 
         text-decoration-line: none;
 
         a {
-            text-decoration-line: none;
+            text-decoration-line: none;            
+            margin-left: 15px;
         }
 
         ul {
@@ -110,7 +140,7 @@
         }
     }
 
-    @media (max-width: 920px) {
+    @media (max-width: 960px) {
         &--title {
             margin-left: 18px;
         }
@@ -125,7 +155,7 @@
         }
     }
 
-    @media (max-width: 780px) {
+    @media (max-width: 820px) {
         &--btn {
             display: none;
         }
@@ -136,7 +166,7 @@
         }
     }
 
-    @media (max-width: 560px) {
+    @media (max-width: 600px) {
         justify-content: space-between;
 
         &--nav {
@@ -181,23 +211,17 @@
 }
 
 .first_block {
+    .futuraDemiC-font(#FFFFFF, 13px, 15px);
     height: 755px;
     background-image: url('/source/images/block3/b3 bg.png');
     background-size: cover;
-    display: flex;
-    font-family: FuturaDemiC, Arial, sans-serif;
-    font-size: 13px;
-    line-height: 15px;
-    color: #FFFFFF;
+    display: flex;       
 
     &--aside {
+        .futuraDemiC-font;
         width: 82px;
-        height: 707px;
-        font-family: FuturaDemiC, Arial, sans-serif;
-        font-size: 14px;
-        line-height: 16px;
-        text-align: center;
-        color: #E3B873;
+        height: 707px;                
+        text-align: center;        
 
         p {
             transform: rotate(-270deg);
@@ -230,24 +254,16 @@
         padding-left: 60px;
 
         &-title {
-            font-family: Yeseva One, serif;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 40px;
-            line-height: 53px;
-            text-transform: uppercase;
-            color: #FFFFFF;
+            .yesevaOne-font(#FFFFFF, 40px, 53px);            
+            text-transform: uppercase;            
             margin-top: 194px;
             max-width: 520px;
         }
 
         &-text {
-            font-family: FuturaBookC, Arial, sans-serif;
-            font-size: 22px;
-            margin-top: 19px;
-            line-height: 135.84%;
-            width: 450px;
-            color: #FFFFFF;
+            .futuraBookC-font(#FFFFFF, 22px, 135.84%);                        
+            margin-top: 19px;            
+            width: 450px;            
         }
 
         &-name {
@@ -255,6 +271,7 @@
         }
 
         &-btn_left {
+            .futuraDemiC-font(#FFFFFF, 13px, 15px);
             background: #E3B873;
             box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
             width: 207px;
@@ -262,25 +279,18 @@
             border: 0;
             border-radius: 2px;
             margin-top: 41px;
-            font-family: FuturaDemiC, Arial, sans-serif;
-            font-size: 13px;
-            line-height: 15px;
-            color: #FFFFFF;
             transition: background 1s;
         }
 
         &-btn_right {
+            .futuraDemiC-font(#FFFFFF, 13px, 15px);
             border: 1px solid #FFFFFF;
             width: 207px;
             height: 51px;
             background: none;
             box-sizing: border-box;
             border-radius: 2px;
-            margin-left: 15px;
-            font-family: FuturaDemiC, Arial, sans-serif;
-            font-size: 13px;
-            line-height: 15px;
-            color: #FFFFFF;
+            margin-left: 15px;           
             transition: background 1s;
         }
 
@@ -400,14 +410,9 @@
             display: flex;
 
             h2 {
-                font-family: Yeseva One;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 27px;
-                line-height: 37px;
+                .yesevaOne-font(#E3B873, 27px, 37px);                                
                 letter-spacing: -0.07em;
-                text-transform: uppercase;
-                color: #E3B873;
+                text-transform: uppercase;                
                 margin-left: 17%;
                 width: 155px;
                 background-image: none;
@@ -424,11 +429,8 @@
         }
 
         &-text {
-            font-family: FuturaBookC;
+            .futuraBookC-font(#FFFFFF, 18px, 29px);            
             width: 73%;
-            font-size: 18px;
-            line-height: 29px;
-            color: #FFFFFF;
             margin-left: 17%;
             margin-top: 34px;
         }
@@ -439,21 +441,13 @@
             width: 83%;
 
             h3 {
-                font-family: Yeseva One;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 18px;
-                line-height: 25px;
-                text-transform: uppercase;
-                color: #E3B873;
+                .yesevaOne-font(#E3B873, 18px, 25px);                
+                text-transform: uppercase;                
                 margin-top: 42px;
             }
 
             p {
-                font-family: FuturaBookC;
-                font-size: 15px;
-                line-height: 20px;
-                color: #FFFFFF;
+                .futuraBookC-font(#FFFFFF, 15px, 20px);                
             }
 
             :first-child {
@@ -545,14 +539,9 @@
         }
 
         &-nav li {
-            font-family: Yeseva One;
-            font-style: normal;
-            font-weight: normal;
-            margin-right: 7%;
-            font-size: 14px;
-            line-height: 19px;
-            text-transform: uppercase;
-            color: rgba(255, 255, 255, 0.3);
+            .yesevaOne-font(rgba(255, 255, 255, 0.3), 14px, 19px);            
+            margin-right: 7%;            
+            text-transform: uppercase;            
         }
 
         &-nav li:nth-child(2) {
@@ -837,24 +826,20 @@
 
 .third_block_control {
     height: 1103px;
+    background-color: white;
     background-image: url('/source/images/block3/b3 bg city left.png'), url('/source/images/block3/b3 bg city rigth.png'), url('/source/images/block3/b3 bg.png');
     background-repeat: no-repeat;
     background-position: left bottom 733px, right bottom 723px, center top;
-    background-size: auto, auto, 100% 371px;
+    background-size: auto, auto, 101% 371px;
 
     h2 {
+        .yesevaOne-font(#FFFFFF, 20px, 28px);                
         background-image: url('/source/images/block3/b3 icon online control.png');
         background-repeat: no-repeat;
-        background-position: bottom;
-        height: 67px;
-        font-family: Yeseva One, serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 20px;
-        line-height: 28px;
+        background-position: bottom;        
+        height: 67px;        
         text-align: center;
-        text-transform: uppercase;
-        color: #FFFFFF;
+        text-transform: uppercase;        
     }
 
     &--player {
@@ -904,6 +889,14 @@
             transition: all 0.6s;
             opacity: 0;
         }
+
+        &-play:hover, &-pause:hover {
+            box-shadow: 3px 3px 3px green, -3px -3px 3px green, 3px -3px 3px green, -3px 3px 3px green;
+        }
+
+        &-play:active, &-pause:active {
+            box-shadow: 3px 3px 3px crimson, -3px -3px 3px crimson, 3px -3px 3px crimson, -3px 3px 3px crimson;
+        }
     }
 
     &--vector {
@@ -917,14 +910,11 @@
     }
 
     &--text {
+        .futuraBookC-font(#363636, 20px, 34px);
         width: 681px;
         margin: 0 auto;
         margin-top: 35px;
-        font-family: FuturaBookC;
-        font-size: 20px;
-        line-height: 34px;
-        text-align: center;
-        color: #363636;
+        text-align: center;        
     }
 
     &--form {
@@ -942,17 +932,11 @@
                 flex-direction: column;
 
                 label {
-                    font-family: FuturaBookC;
-                    font-size: 15px;
-                    line-height: 20px;
-                    color: rgba(54, 54, 54, 0.5);
+                    .futuraBookC-font(rgba(54, 54, 54, 0.5), 15px, 20px);                    
                 }
 
                 input {
-                    font-family: FuturaBookC;
-                    font-size: 18px;
-                    line-height: 24px;
-                    color: #363636;
+                    .futuraBookC-font(#363636, 18px, 24px);                    
                     border: 0;
                 }
             }
@@ -978,17 +962,14 @@
             }
 
             button {
+                .futuraDemiC-font(#FFFFFF, 15px, 26px);
                 width: 200px;
                 border: 0;
                 background: #E3B873;
                 box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
-                border-radius: 2px;
-                font-family: FuturaDemiC;
-                font-size: 15px;
-                line-height: 26px;
+                border-radius: 2px;                
                 text-align: center;
-                text-transform: uppercase;
-                color: #FFFFFF;
+                text-transform: uppercase;                
             }
 
             button:hover {
@@ -999,19 +980,18 @@
         }
 
         &-check {
+            .futuraBookC-font(#181818, 16px, 22px);
             width: 300px;
             margin: 0 auto;
-            margin-top: 33px;
-            font-family: FuturaBookC;
-            font-size: 16px;
-            line-height: 22px;
-            color: #181818;
+            margin-top: 33px;            
             display: flex;
             align-items: center;
             cursor: pointer;
 
             input {
-                display: none;
+                width: 10px;
+                opacity: 0;
+                position: absolute;
 
                 &:checked + .third_block_control--form-check-box {
                     background-color: #E3B873;
@@ -1021,8 +1001,8 @@
                         position: absolute;
                         width: 50%;
                         height: 20%;
-                        border-left: 0px solid;
-                        border-bottom: 0px solid;
+                        border-left: 2px solid;
+                        border-bottom: 2px solid;
                         border-color: white;
                         transform: rotate(-45deg) translate3d(0,0,0);
                         transform-origin: center center;
@@ -1048,8 +1028,8 @@
                     position: absolute;
                     width: 50%;
                     height: 20%;
-                    border-left: 2px solid;
-                    border-bottom: 2px solid;
+                    border-left: 0px solid;
+                    border-bottom: 0px solid;
                     border-color: white;
                     transform: rotate(-45deg) translate3d(0,0,0);
                     transform-origin: center center;
@@ -1191,20 +1171,15 @@
     background-color: white;
 
     &--title {
+        .yesevaOne-font( #181818, 20px, 28px);
         background-image: url('/source/images/block4/b4 icon types of repair.png');
         background-repeat: no-repeat;
         background-position: bottom;
         height: 67px;
         width: 250px;
-        margin: 0 auto;
-        font-family: Yeseva One;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 20px;
-        line-height: 28px;
+        margin: 0 auto;        
         text-align: center;
-        text-transform: uppercase;
-        color: #181818;
+        text-transform: uppercase;        
     }
 
     &--types {
@@ -1313,11 +1288,8 @@
             margin-top: 110px;
 
             li {
-                list-style: none;
-                font-family: FuturaMediumC;
-                font-size: 18px;
-                line-height: 21px;
-                color: #363636;
+                .futuraMediumC-font(#363636, 18px, 21px);
+                list-style: none;                
             }
 
             :nth-child(1) {
@@ -1362,6 +1334,7 @@
             }
 
             span {
+                .yesevaOne-font(#FFFFFF, 18px, 25px);
                 color: white;
                 background: #E3B873;
                 display: inline-block;
@@ -1370,12 +1343,7 @@
                 line-height: 40px;
                 width: 42px;
                 height: 42px;
-                border-radius: 50%;
-                font-family: Yeseva One;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 18px;
-                color: #FFFFFF;
+                border-radius: 50%;      
             }
         }
 
@@ -1392,11 +1360,8 @@
                 margin-left: 50px;
 
                 p {
-                    font-family: FuturaDemiC;
-                    font-size: 20px;
-                    line-height: 25px;
-                    text-align: center;
-                    color: #FFFFFF;
+                    .futuraDemiC-font(#FFFFFF, 20px, 25px);                    
+                    text-align: center;                    
                     width: 280px;
                     margin: 0 auto;
                     padding-top: 28px;
@@ -1415,16 +1380,11 @@
                         width: 100%;
 
                         label {
-                            font-size: 15px;
-                            line-height: 20px;
-                            color: rgba(255, 255, 255, 0.5);
+                            .futuraBookC-font(rgba(255, 255, 255, 0.5), 15px, 20px);
                         }
 
                         input {
-                            font-family: FuturaMediumC;
-                            font-size: 18px;
-                            line-height: 25px;
-                            color: #FFFFFF;
+                            .futuraMediumC-font(#FFFFFF, 18px, 25px);                            
                             border: 0;
                             background-color: rgba(0, 0, 0, 0);
                         }
@@ -1464,27 +1424,21 @@
 
                     :nth-child(4) {
                         label {
-                            margin: 16px 0 0 0;
-                            font-family: FuturaBookC;
-                            font-size: 16px;
-                            line-height: 22px;
-                            color: #FFFFFF;
+                            .futuraBookC-font(#FFFFFF, 16px, 22px);
+                            margin: 16px 0 0 0;                            
                         }
                     }
 
                     button {
+                        .futuraDemiC-font(#FFFFFF, 15px, 26px);
                         width: 213px;
                         height: 51px;
                         border: 0;
                         background: #E3B873;
                         box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
-                        border-radius: 2px;
-                        font-family: FuturaDemiC;
-                        font-size: 15px;
-                        line-height: 26px;
+                        border-radius: 2px;                        
                         text-align: center;
-                        text-transform: uppercase;
-                        color: #FFFFFF;
+                        text-transform: uppercase;                        
                         margin-top: 39px;
                         align-self: flex-end;
                     }
@@ -1493,6 +1447,66 @@
                         outline: 2px solid crimson;
                         cursor: pointer;
                         color: black;
+                    }
+
+                    &-check {                        
+                        width: 300px;
+                        margin: 0 auto;
+                        margin-top: 33px;                        
+                        display: flex;
+                        align-items: center;
+                        cursor: pointer;
+
+                        input {
+                            width: 10px;
+                            opacity: 0;
+                            position: absolute;
+
+                            &:checked + .fourth_block_repair--cell_measurer-r_section-form-inputs-check-box {
+                                background-color: #E3B873;
+
+                                &:after {
+                                    content: '';
+                                    position: absolute;
+                                    width: 50%;
+                                    height: 20%;
+                                    border-left: 2px solid;
+                                    border-bottom: 2px solid;
+                                    border-color: white;
+                                    transform: rotate(-45deg) translate3d(0,0,0);
+                                    transform-origin: center center;
+                                    transition: all 0.5s;
+                                    margin-left: 4px;
+                                    margin-top: 5px;
+                                }
+                            }
+                        }
+
+                        &-box {
+                            display: block;
+                            float: left;
+                            width: 18px;
+                            height: 18px;
+                            background-color: #E3B873;
+                            margin-right: 5px;
+                            position: relative;
+                            border-radius: 1px;
+
+                            &:after {
+                                content: '';
+                                position: absolute;
+                                width: 50%;
+                                height: 20%;
+                                border-left: 0px solid;
+                                border-bottom: 0px solid;
+                                border-color: white;
+                                transform: rotate(-45deg) translate3d(0,0,0);
+                                transform-origin: center center;
+                                transition: all 0.5s;
+                                margin-left: 4px;
+                                margin-top: 5px;
+                            }
+                        }
                     }
                 }
 
@@ -1503,13 +1517,10 @@
                     height: 130px;
                     width: 345px;
                     margin-left: 65px;
-                    
+
                     p {
-                        margin-left: 120px;
-                        font-family: FuturaDemiC;
-                        font-size: 20px;
-                        line-height: 25px;  
-                        color: #E3B873;
+                        .futuraDemiC-font(#E3B873, 20px, 25px);
+                        margin-left: 120px;                        
                         text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15);
                         padding-top: 45px;
                     }
@@ -1632,9 +1643,11 @@
 .fifth_block_fantasies {
     background-image: url('/source/images/block5/b5 bg-img.png');
     background-position: left top 113px;
+    background-size: 100% auto;
     background-repeat: no-repeat;
     height: 1018px;
     display: flex;
+    background-color: white;
 
     &--nav {
         width: 33.7%;
@@ -1642,29 +1655,18 @@
         margin-left: 7%;
 
         &-title {
-            font-family: Yeseva One;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 27px;
-            line-height: 37px;
-            color: #E3B873;
+            .yesevaOne-font(#E3B873, 27px, 37px);            
             text-transform: uppercase;
             width: 280px;
         }
 
         &-item a {
-            font-family: Proxima Nova;
-            font-size: 20px;
-            line-height: 34px;
-            color: #FFFFFF;
+            .proximaNova-font(#FFFFFF, 20px, 34px);            
             text-decoration: none;
         }
 
-        &-item a:hover {
-            font-family: Proxima Nova;
-            text-decoration: underline;
-            font-size: 20px;
-            line-height: 34px;
+        &-item a:hover {            
+            text-decoration: underline;            
             color: #E3B873;
         }
     }
@@ -1838,34 +1840,27 @@
     height: 1788px;
     background-image: url('/source/images/block6/b6 bg.png');
     background-position: center top 579px;
+    background-size: cover;
     background-repeat: no-repeat;
 
     &--title {
+        .yesevaOne-font(#181818, 20px, 28px);
         background-image: url('/source/images/block6/b6 icon dising.png');
         background-repeat: no-repeat;
         background-position: bottom;
         width: 250px;
         height: 67px;
-        margin-top: 112px;
-        font-family: Yeseva One;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 20px;
-        line-height: 28px;
+        margin-top: 112px;        
         text-align: center;
-        text-transform: uppercase;
-        color: #181818;
+        text-transform: uppercase;        
     }
 
     &--text {
+        .futuraBookC-font(#363636, 20px, 27px);
         width: 670px;
         height: 57px;
-        margin: 0 auto;
-        font-family: FuturaBookC;
-        font-size: 20px;
-        line-height: 27px;
-        text-align: center;
-        color: #363636;
+        margin: 0 auto;        
+        text-align: center;        
         margin-top: 24px;
     }
 
@@ -1895,12 +1890,7 @@
             min-width: 236px;
 
             h3 {
-                font-family: Yeseva One;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 18px;
-                line-height: 25px;
-                color: #363636;
+                .yesevaOne-font(#363636, 18px, 25px);                
                 margin-left: 9%;
                 padding-top: 25px;
             }
@@ -1912,23 +1902,15 @@
             }
 
             li {
-                font-family: FuturaBookC;
-                font-size: 15px;
-                line-height: 25px;
-                color: #959595;
+                .futuraBookC-font(#959595, 15px, 25px);                
             }
 
             &-cost {
+                .yesevaOne-font(#FFFFFF, 18px 25px);
                 background: #E3B873;
                 width: 228px;
-                height: 54px;
-                font-family: Yeseva One;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 18px;
-                line-height: 25px;
-                text-transform: uppercase;
-                color: #FFFFFF;
+                height: 54px;                
+                text-transform: uppercase;                
                 text-align: center;
                 line-height: 55px;
                 margin-top: 19px;
@@ -1974,28 +1956,20 @@
         display: flex;
 
         &-l_block {
-            width: 573px;
+            width: 40%;
 
             &-about {
-                font-family: FuturaDemiC;
-                font-size: 15px;
-                line-height: 21px;
-                text-transform: uppercase;
-                color: #FFFFFF;
+                .futuraDemiC-font(#FFFFFF, 15px, 21px);                
+                text-transform: uppercase;                
                 margin-top: -30px;
                 margin-left: 17%;
             }
 
             &-title {
-                font-family: Yeseva One;
-                font-style: normal;
-                font-weight: normal;
+                .yesevaOne-font(#E3B873, 27px, 37px);                
                 width: 160px;
-                height: 66px;
-                font-size: 27px;
-                line-height: 37px;
-                text-transform: uppercase;
-                color: #E3B873;
+                height: 66px;                
+                text-transform: uppercase;                
                 margin-top: 7px;
                 margin-left: 17%;
                 display: inline-block;
@@ -2011,13 +1985,8 @@
             }
 
             &-title2 {
-                font-family: Yeseva One;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 15px;
-                line-height: 23px;
-                text-transform: uppercase;
-                color: #E3B873;
+                .yesevaOne-font(#E3B873, 15px, 23px);
+                text-transform: uppercase;                
                 width: 262px;
                 height: 42px;
                 margin-top: 22px;
@@ -2025,22 +1994,14 @@
             }
 
             &-step {
+                .yesevaOne-font(#FFFFFF, 18px, 25px);
                 margin-top: 92px;
-                margin-left: 17%;
-                font-family: Yeseva One;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 18px;
-                line-height: 25px;
-                text-transform: uppercase;
-                color: #FFFFFF;
+                margin-left: 17%;                
+                text-transform: uppercase;                
             }
 
             &-text {
-                font-family: FuturaBookC;
-                font-size: 15px;
-                line-height: 25px;
-                color: #FFFFFF;
+                .futuraBookC-font(#FFFFFF, 15px, 25px);                
                 margin-left: 17%;
                 margin-top: 16px;
                 width: 337px;
@@ -2099,7 +2060,7 @@
 
         &-r_block {
             margin-top: 60px;
-            width: 60%;
+            width: 59.6%;
 
             &-list1, &-list2 {
                 display: flex;
@@ -2112,22 +2073,14 @@
                     height: 71px;
 
                     span {
-                        width: 20px;
-                        font-family: Yeseva One;
-                        font-style: normal;
-                        font-weight: normal;
-                        font-size: 15px;
-                        line-height: 21px;
-                        text-transform: uppercase;
-                        color: rgba(255, 255, 255, 0.5);
+                        .yesevaOne-font(rgba(255, 255, 255, 0.5), 15px, 21px);
+                        width: 20px;                        
+                        text-transform: uppercase;                        
                         border-bottom: 1px solid rgba(227, 184, 115, 0.3);
                     }
 
                     p {
-                        font-family: FuturaBookC;
-                        font-size: 15px;
-                        line-height: 18px;
-                        color: #FFFFFF;
+                        .futuraBookC-font(#FFFFFF, 15px, 18px);                        
                         opacity: 0.5;
                     }
                 }
@@ -2412,45 +2365,36 @@
 
 .seventh_block_team {
     height: 933px;
+    background-color: white;
     background-image: url('/source/images/block7/b7 bg.png');
     background-repeat: no-repeat;
     background-position: center bottom 526px;
+    background-size: cover;
 
     &--title {
+        .yesevaOne-font(#FFFFFF, 20px, 28px);
         background-image: url('/source/images/block7/b7 icon.png');
         background-repeat: no-repeat;
         background-position: bottom;
-        height: 75px;
-        font-family: Yeseva One;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 20px;
-        line-height: 28px;
+        height: 75px;        
         text-align: center;
-        text-transform: uppercase;
-        color: #FFFFFF;
+        text-transform: uppercase;        
     }
 
     &--text {
+        .futuraBookC-font(#FFFFFF, 20px, 27px);
         margin: 0 auto;
         margin-top: 26px;
         width: 460px;
-        height: 63px;
-        font-family: FuturaBookC;
-        font-size: 20px;
-        line-height: 27px;
-        text-align: center;
-        color: #FFFFFF;
+        height: 63px;        
+        text-align: center;        
     }
 
     &--text2, &--text3 {
+        .futuraBookC-font(#363636, 20px, 34px);
         width: 558px;
         margin: 0 auto;
-        font-family: FuturaBookC;
-        font-size: 20px;
-        line-height: 34px;
-        text-align: center;
-        color: #363636;
+        text-align: center;        
     }
 
     &--text2 {
@@ -2504,41 +2448,28 @@
             height: 134px;
 
             :first-child {
+                .yesevaOne-font(#181818, 18px, 25px);
                 margin-top: 22px;
-                height: 21px;
-                font-family: Yeseva One;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 18px;
-                line-height: 25px;
-                text-align: center;
-                color: #181818;
+                height: 21px;                
+                text-align: center;                
             }
 
             :nth-child(2) {
-                font-family: FuturaBookC;
-                font-size: 18px;
-                line-height: 26px;
-                text-align: center;
-                color: #959595;
+                .futuraBookC-font(#959595, 18px, 26px);                                
+                text-align: center;                
                 margin-top: 9px;
                 height: 17px;
             }
 
             :last-child {
+                .yesevaOne-font(#FFFFFF, 13px, 20px);
                 height: 43px;
                 width: 233px;
                 margin-top: 23px;
-                background-color: #E3B873;
-                font-family: Yeseva One;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 13px;
-                line-height: 20px;
+                background-color: #E3B873;                
                 text-align: center;
                 line-height: 42px;
-                text-transform: uppercase;
-                color: #FFFFFF;
+                text-transform: uppercase;                
             }
         }
     }
@@ -2664,28 +2595,20 @@
     background-color: #fdfdfd;
 
     &--title {
+        .yesevaOne-font(#181818, 20px, 28px);
         background-image: url('/source/images/block8/b8 icon.png');
         background-repeat: no-repeat;
-        background-position: bottom;
-        font-family: Yeseva One;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 20px;
-        line-height: 28px;
+        background-position: bottom;        
         text-align: center;
-        text-transform: uppercase;
-        color: #181818;
+        text-transform: uppercase;        
         height: 67px;
     }
 
     &--text {
+        .yesevaOne-font(#363636, 20px, 27px);
         width: 376px;
-        height: 57px;
-        font-family: FuturaBookC;
-        font-size: 20px;
-        line-height: 27px;
-        text-align: center;
-        color: #363636;
+        height: 57px;        
+        text-align: center;        
         margin: 0 auto;
         margin-top: 24px;
     }
@@ -2699,8 +2622,8 @@
         justify-content: space-between;
 
         > div {
-            width: 30%;
-            min-width: 292px;
+            width: 30%;       
+            min-width: 295px;
             height: 428px;
             background: #FFFFFF;
             box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
@@ -2743,10 +2666,7 @@
         }
 
         &-text {
-            font-family: FuturaBookC;
-            font-size: 15px;
-            line-height: 180%;
-            color: #959595;
+            .futuraBookC-font(#959595, 15px, 180%);
             width: 90%;
             height: 221px;
             margin-top: 18px;
@@ -2754,19 +2674,14 @@
         }
 
         &-data1 {
+            .yesevaOne-font(#FFFFFF, 17px, 24px);
             background-image: url('/source/images/block8/b8 icon img left.png');
             background-repeat: no-repeat;
             background-position: left 17px top 11px;
             width: 130px;
             height: 54px;
             background-color: #E3B873;
-            display: inline-block;
-            font-family: Yeseva One;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 17px;
-            line-height: 24px;
-            color: #FFFFFF;
+            display: inline-block;            
             margin-top: 58px;
             display: inline-flex;
 
@@ -2777,6 +2692,7 @@
         }
 
         &-data2 {
+            .yesevaOne-font(#FFFFFF, 17px, 24px);
             background-image: url('/source/images/block8/b8 icon img right.png');
             background-repeat: no-repeat;
             background-position: left 17px top 9px;
@@ -2785,13 +2701,7 @@
             background-color: #E3B873;
             display: inline-block;
             margin-left: -4px;
-            border-left: 1px solid white;
-            font-family: Yeseva One;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 17px;
-            line-height: 24px;
-            color: #FFFFFF;
+            border-left: 1px solid white;            
             margin-top: 58px;
             display: inline-flex;
 
@@ -2827,7 +2737,7 @@
         }
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 620px) {
         &--clients > div:nth-child(2) {
             display: none;
         }
@@ -2848,9 +2758,11 @@
 
 .ninth_block_questions {
     height: 1308px;
+    background-color: white;
     background-image: url('/source/images/block9/b9 bg-img.png'), url('/source/images/block9/b9 bg-top left.png'), url('/source/images/block9/b9 bg-top right.png');
     background-repeat: no-repeat;
     background-position: top 355px left 0px, bottom 935px left 0, bottom 935px left 720px;
+    background-size: cover, auto, auto;    
 
     &--any {
         background-color: #181818;
@@ -2868,14 +2780,9 @@
         }
 
         &-title {
-            font-family: Yeseva One;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 20px;
-            line-height: 28px;
+            .yesevaOne-font(#FFFFFF, 20px, 28px);            
             text-align: center;
-            text-transform: uppercase;
-            color: #FFFFFF;
+            text-transform: uppercase;            
             height: 26px;
         }
 
@@ -2885,10 +2792,7 @@
             flex-direction: column;
 
             label {
-                font-family: FuturaBookC;
-                font-size: 15px;
-                line-height: 20px;
-                color: rgba(255, 255, 255, 0.5);
+                .futuraBookC-font(rgba(255, 255, 255, 0.5), 15px, 20px);                
             }
 
             &-info {
@@ -2906,10 +2810,7 @@
                 flex-direction: column;
 
                 input {
-                    font-family: FuturaBookC;
-                    font-size: 18px;
-                    line-height: 24px;
-                    color: #FFFFFF;
+                    .futuraBookC-font(#FFFFFF, 18px, 24px);                    
                     background-color: #181818;
                     border: 0;
                     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
@@ -2924,19 +2825,18 @@
 
 
             &-check {
+                .futuraBookC-font(#181818, 16px, 22px);
                 width: 300px;
                 margin: 0 auto;
-                margin-top: 47px;
-                font-family: FuturaBookC;
-                font-size: 16px;
-                line-height: 22px;
-                color: #181818;
+                margin-top: 47px;                
                 display: flex;
                 align-items: center;
                 cursor: pointer;
 
                 input {
-                    display: none;
+                    width: 10px;
+                    opacity: 1;
+                    position: absolute;
 
                     &:checked + .ninth_block_questions--any-form-check-box {
                         background-color: #E3B873;
@@ -2946,8 +2846,8 @@
                             position: absolute;
                             width: 50%;
                             height: 20%;
-                            border-left: 0px solid;
-                            border-bottom: 0px solid;
+                            border-left: 2px solid;
+                            border-bottom: 2px solid;
                             border-color: white;
                             transform: rotate(-45deg) translate3d(0,0,0);
                             transform-origin: center center;
@@ -2973,8 +2873,8 @@
                         position: absolute;
                         width: 50%;
                         height: 20%;
-                        border-left: 2px solid;
-                        border-bottom: 2px solid;
+                        border-left: 0px solid;
+                        border-bottom: 0px solid;
                         border-color: white;
                         transform: rotate(-45deg) translate3d(0,0,0);
                         transform-origin: center center;
@@ -2986,16 +2886,13 @@
             }
 
             &-btn {
+                .futuraDemiC-font(#FFFFFF, 15px, 26px);
                 width: 200px;
                 height: 51px;
                 margin-top: 50px;
                 background-color: #E3B873;
-                border: 0;
-                font-family: FuturaDemiC;
-                font-size: 15px;
-                line-height: 26px;
-                text-transform: uppercase;
-                color: #FFFFFF;
+                border: 0;                
+                text-transform: uppercase;                
                 align-self: center;
                 box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.1);
             }
@@ -3014,17 +2911,12 @@
     }
 
     &--title {
+        .yesevaOne-font(#E3B873, 20px, 28px);
         width: 580px;
         height: 105px;
-        margin: 0 auto;
-        font-family: Yeseva One;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 20px;
-        line-height: 28px;
+        margin: 0 auto;        
         text-align: center;
-        text-transform: uppercase;
-        color: #E3B873;
+        text-transform: uppercase;        
         margin-top: 52px;
 
         a {
@@ -3051,6 +2943,7 @@
             width: 28px;
             transition: 0.5s all;
         }
+
         &-right {
             background-image: url('/source/images/block9/b9 icon right.png');
             height: 28px;
@@ -3064,6 +2957,7 @@
             border: 1px solid crimson;
             border-radius: 50%;    
         }
+
         &-right:hover {
             margin-right: 5px;
             cursor: pointer;
