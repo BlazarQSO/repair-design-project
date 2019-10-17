@@ -43,8 +43,8 @@
     max-width: 1440px;
     margin: 0 auto;
 
-    @media (max-width: 375px) {
-        width: 375px;
+    @media (max-width: 375px){
+        min-width: 375px;
     }
 }
 
@@ -59,7 +59,7 @@
         .futuraDemiC-font;
         text-transform: uppercase;        
         margin-left: 82px;
-        min-width: 180px;
+        min-width: 182px;        
     }
 
     &--number {
@@ -214,7 +214,7 @@
     .futuraDemiC-font(#FFFFFF, 13px, 15px);
     height: 755px;
     background-image: url('/source/images/block3/b3 bg.png');
-    background-size: cover;
+    background-size: 101% 101%;
     display: flex;       
 
     &--aside {
@@ -233,7 +233,7 @@
         }
 
         &-vector {
-            border: 2px solid #E3B873;
+            border: 1px solid #E3B873;
             height: 51px;
             margin: 0 auto;
             width: 0;
@@ -241,7 +241,7 @@
         }
 
         > div {
-            margin-top: 252px;
+            margin-top: 272px;
         }
     }
 
@@ -399,7 +399,7 @@
 .second_block_completed {
     height: 702px;
     background: url('/source/images/block2/b2 bg.png');
-    background-size: cover;
+    background-size: 101% 101%;
     display: flex;
 
     &--section {
@@ -447,7 +447,8 @@
             }
 
             p {
-                .futuraBookC-font(#FFFFFF, 15px, 20px);                
+                .futuraBookC-font(#FFFFFF, 15px, 20px);      
+                margin-top: 6px;          
             }
 
             :first-child {
@@ -482,10 +483,10 @@
         &-arrows {
             width: 100%;
             height: 30px;
-            margin-top: 80px;
+            margin-top: 65px;
             display: flex;
             align-items: center;
-            justify-content: center;
+            margin-left: 17%;
 
             span {
                 width: 10px;
@@ -539,9 +540,13 @@
         }
 
         &-nav li {
+            margin-right: 7%;                        
+        }
+
+        &-nav li a {
             .yesevaOne-font(rgba(255, 255, 255, 0.3), 14px, 19px);            
-            margin-right: 7%;            
             text-transform: uppercase;            
+            outline: none;
         }
 
         &-nav li:nth-child(2) {
@@ -734,7 +739,7 @@
                 padding: 0;
                 width: 1020px;
                 height: 242px;
-
+                
                 &-img1, &-img2, &-img3 {
                     width: 340px;
                     height: 242px;
@@ -791,7 +796,7 @@
     @media (max-width: 375px) {
         background-image: none;
         background-color: #181818;
-        height: 727px;
+        height: 717px;
 
         &--section {
             > div:last-child {
@@ -820,6 +825,16 @@
             &-l_btn, &-r_btn {
                 margin-top: 280px;
             }
+
+            &-slider {
+                            &-img1 {
+                background-image: url('/source/images/block2/b2 img2.png'), url('/source/images/block2/b2 bg.png');
+            }
+
+            &-img2 {
+                background-image: url('/source/images/block2/b2 img1.png'), url('/source/images/block2/b2 bg.png');
+            }
+            }
         }
     }
 }
@@ -833,13 +848,13 @@
     background-size: auto, auto, 101% 371px;
 
     h2 {
-        .yesevaOne-font(#FFFFFF, 20px, 28px);                
+        .yesevaOne-font(#FFFFFF, 20px, 28px);
         background-image: url('/source/images/block3/b3 icon online control.png');
         background-repeat: no-repeat;
-        background-position: bottom;        
-        height: 67px;        
+        background-position: bottom;
+        height: 67px;
         text-align: center;
-        text-transform: uppercase;        
+        text-transform: uppercase;
     }
 
     &--player {
@@ -854,8 +869,8 @@
             width: 100%;
         }
 
-        video[poster] {
-            object-fit: cover;
+        video[poster] {                  
+            
         }
 
         &-play {
@@ -871,7 +886,7 @@
             margin-left: -42px;
             top: 50%;
             margin-top: -42px;
-            transition: all 0.6s;
+            z-index: 9999;
         }
 
         &-pause {
@@ -884,10 +899,11 @@
             border: 2px solid #E3B873;
             position: absolute;
             top: 100%;
-            margin-top: -30px;
+            margin-top: -40px;
             left: 20px;
             transition: all 0.6s;
             opacity: 0;
+            z-index: 9999;
         }
 
         &-play:hover, &-pause:hover {
@@ -914,7 +930,7 @@
         width: 681px;
         margin: 0 auto;
         margin-top: 35px;
-        text-align: center;        
+        text-align: center;
     }
 
     &--form {
@@ -932,11 +948,11 @@
                 flex-direction: column;
 
                 label {
-                    .futuraBookC-font(rgba(54, 54, 54, 0.5), 15px, 20px);                    
+                    .futuraBookC-font(rgba(54, 54, 54, 0.5), 15px, 20px);
                 }
 
                 input {
-                    .futuraBookC-font(#363636, 18px, 24px);                    
+                    .futuraBookC-font(#363636, 18px, 24px);
                     border: 0;
                 }
             }
@@ -967,9 +983,9 @@
                 border: 0;
                 background: #E3B873;
                 box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
-                border-radius: 2px;                
+                border-radius: 2px;
                 text-align: center;
-                text-transform: uppercase;                
+                text-transform: uppercase;
             }
 
             button:hover {
@@ -983,7 +999,7 @@
             .futuraBookC-font(#181818, 16px, 22px);
             width: 300px;
             margin: 0 auto;
-            margin-top: 33px;            
+            margin-top: 33px;
             display: flex;
             align-items: center;
             cursor: pointer;
@@ -1041,8 +1057,12 @@
         }
     }
 
+    @media (max-width: 1120px) {
+        height: 901px;
+    }
+
     @media (max-width: 850px) {
-        height: 851px;
+        height: 891px;
         background-image: none;
         background-image: url('/source/images/block3/b3 bg.png');
         background-repeat: no-repeat;
@@ -1068,6 +1088,10 @@
             video {
                 width: 340px;
                 height: 207px;
+            }
+
+            video[poster] {
+                object-fit: cover;
             }
 
             &-play {
@@ -1149,7 +1173,7 @@
             button {
                 width: 340px;
                 height: 51px;
-                margin-top: 88px;
+                margin-top: 95px;
             }
 
             &-check {
@@ -1163,6 +1187,7 @@
     }
 
     @media (max-width: 375px) {
+        height: 901px;
     }
 }
 
@@ -1540,6 +1565,7 @@
     }
 
     @media (max-width: 1050px) {
+        height: 1585px;
         &--cell_measurer {
             margin-left: -300px;
 
@@ -1556,10 +1582,6 @@
 
         &--cell_measurer {
             display: none;
-        }
-
-        &--title {
-            margin-top: 58px;
         }
 
         &--types {
@@ -1585,10 +1607,10 @@
     }
 
     @media (max-width: 375px) {
-        height: 1710px;
+        height: 1640px;
 
         &--title {
-            height: 71px;
+            height: 71px;            
         }
 
         &--types {
@@ -1641,9 +1663,9 @@
 }
 
 .fifth_block_fantasies {
-    background-image: url('/source/images/block5/b5 bg-img.png');
-    background-position: left top 113px;
-    background-size: 100% auto;
+    background-image: url('/source/images/block5/b5_bg-img.png');
+    background-position: center top 113px ;
+    
     background-repeat: no-repeat;
     height: 1018px;
     display: flex;
@@ -1657,7 +1679,7 @@
         &-title {
             .yesevaOne-font(#E3B873, 27px, 37px);            
             text-transform: uppercase;
-            width: 280px;
+            width: 285px;
         }
 
         &-item a {
@@ -1797,7 +1819,7 @@
         }
     }
 
-    @media (max-width: 1020px) {
+    @media (max-width: 1050px) {
         height: 387px;
         flex-direction: column;
         background-image: none;
@@ -1837,10 +1859,10 @@
 }
 
 .sixth_block_design {
-    height: 1788px;
+    height: 1740px;
     background-image: url('/source/images/block6/b6 bg.png');
     background-position: center top 579px;
-    background-size: cover;
+    background-size: 101% 101%;
     background-repeat: no-repeat;
 
     &--title {
@@ -1850,17 +1872,17 @@
         background-position: bottom;
         width: 250px;
         height: 67px;
-        margin-top: 112px;        
+        padding-top: 113px;
         text-align: center;
-        text-transform: uppercase;        
+        text-transform: uppercase;
     }
 
     &--text {
         .futuraBookC-font(#363636, 20px, 27px);
         width: 670px;
         height: 57px;
-        margin: 0 auto;        
-        text-align: center;        
+        margin: 0 auto;
+        text-align: center;
         margin-top: 24px;
     }
 
@@ -1890,7 +1912,7 @@
             min-width: 236px;
 
             h3 {
-                .yesevaOne-font(#363636, 18px, 25px);                
+                .yesevaOne-font(#363636, 18px, 25px);
                 margin-left: 9%;
                 padding-top: 25px;
             }
@@ -1902,15 +1924,15 @@
             }
 
             li {
-                .futuraBookC-font(#959595, 15px, 25px);                
+                .futuraBookC-font(#959595, 15px, 25px);
             }
 
             &-cost {
                 .yesevaOne-font(#FFFFFF, 18px 25px);
                 background: #E3B873;
                 width: 228px;
-                height: 54px;                
-                text-transform: uppercase;                
+                height: 54px;
+                text-transform: uppercase;
                 text-align: center;
                 line-height: 55px;
                 margin-top: 19px;
@@ -1959,17 +1981,17 @@
             width: 40%;
 
             &-about {
-                .futuraDemiC-font(#FFFFFF, 15px, 21px);                
-                text-transform: uppercase;                
+                .futuraDemiC-font(#FFFFFF, 15px, 21px);
+                text-transform: uppercase;
                 margin-top: -30px;
                 margin-left: 17%;
             }
 
             &-title {
-                .yesevaOne-font(#E3B873, 27px, 37px);                
+                .yesevaOne-font(#E3B873, 27px, 37px);
                 width: 160px;
-                height: 66px;                
-                text-transform: uppercase;                
+                height: 66px;
+                text-transform: uppercase;
                 margin-top: 7px;
                 margin-left: 17%;
                 display: inline-block;
@@ -1986,7 +2008,7 @@
 
             &-title2 {
                 .yesevaOne-font(#E3B873, 15px, 23px);
-                text-transform: uppercase;                
+                text-transform: uppercase;
                 width: 262px;
                 height: 42px;
                 margin-top: 22px;
@@ -1996,12 +2018,12 @@
             &-step {
                 .yesevaOne-font(#FFFFFF, 18px, 25px);
                 margin-top: 92px;
-                margin-left: 17%;                
-                text-transform: uppercase;                
+                margin-left: 17%;
+                text-transform: uppercase;
             }
 
             &-text {
-                .futuraBookC-font(#FFFFFF, 15px, 25px);                
+                .futuraBookC-font(#FFFFFF, 15px, 25px);
                 margin-left: 17%;
                 margin-top: 16px;
                 width: 337px;
@@ -2015,10 +2037,11 @@
             &-arrows {
                 width: 100%;
                 height: 30px;
-                margin-top: 80px;
+                margin-top: 55px;
+                margin-left: 17%;
                 display: flex;
                 align-items: center;
-                justify-content: center;
+
 
                 span {
                     width: 10px;
@@ -2074,13 +2097,13 @@
 
                     span {
                         .yesevaOne-font(rgba(255, 255, 255, 0.5), 15px, 21px);
-                        width: 20px;                        
-                        text-transform: uppercase;                        
+                        width: 20px;
+                        text-transform: uppercase;
                         border-bottom: 1px solid rgba(227, 184, 115, 0.3);
                     }
 
                     p {
-                        .futuraBookC-font(#FFFFFF, 15px, 18px);                        
+                        .futuraBookC-font(#FFFFFF, 15px, 18px);
                         opacity: 0.5;
                     }
                 }
@@ -2197,7 +2220,7 @@
         }
     }
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1200px) {        
         &--types {
             width: 100%;
         }
@@ -2224,15 +2247,15 @@
         }
     }
 
-    @media (max-width: 1020px) {
+    @media (max-width: 1050px) {
         background: none;
         background-image: url('/source/images/block6/b6 bg.png');
-        background-size: cover;
+        background-size: 100% 102%;
 
         &--title {
             font-size: 22px;
             line-height: 138.6%;
-            color: #FFFFFF;
+            color: #FFFFFF;            
         }
 
         &--text {
@@ -2243,14 +2266,13 @@
     }
 
     @media (max-width: 850px) {
-        height: 2260px;
+        height: 2380px;
 
         &--work {
             display: none;
         }
 
         &--title {
-            margin-top: 52px;
             height: 70px;
         }
 
@@ -2283,7 +2305,7 @@
     }
 
     @media (max-width: 375px) {
-        height: 1767px;
+        height: 1840px;
 
         &--title {
             height: 71px;
@@ -2302,7 +2324,7 @@
                 width: 270px;
                 height: 241px;
                 margin: 0;
-                margin-top: -130px;
+                margin-top: -145px;
 
                 h3 {
                     padding-top: 20px;
@@ -2359,13 +2381,21 @@
                 width: 340px;
                 height: 365px;
             }
+
+            &-img2 {                
+                background-image: url('/source/images/block6/b6 img3.png');                
+            }
+
+            &-img3 {                
+                background-image: url('/source/images/block6/b6 img2.png');                
+            }
         }
     }
 }
 
-.seventh_block_team {
+.seventh_block_team {    
     height: 933px;
-    background-color: white;
+    background-color: #fdfdfd;
     background-image: url('/source/images/block7/b7 bg.png');
     background-repeat: no-repeat;
     background-position: center bottom 526px;
@@ -2402,13 +2432,15 @@
     }
 
     &--vect1, &--vect2 {
-        width: 55px;
-        border: 2px solid #E3B873;
+        width: 53px;
+        border: 1.2px solid #E3B873;
         margin: 0 auto;
     }
 
     &--vect2 {
-        margin-top: 73px;
+        margin-top: 71px;
+        border: 1.2px solid #E3B873;
+        height: 0;
     }
 
     &--experts {
@@ -2416,7 +2448,7 @@
         height: 493px;
         display: flex;
         justify-content: space-between;
-        margin-left: 13%;
+        margin-left: 12%;
         margin-top: 32px;
 
         > div:first-child,
@@ -2445,11 +2477,11 @@
             margin-left: 52px;
             background-color: white;
             width: 233px;
-            height: 134px;
+            height: 117px;
 
             :first-child {
                 .yesevaOne-font(#181818, 18px, 25px);
-                margin-top: 22px;
+                padding-top: 20px;
                 height: 21px;                
                 text-align: center;                
             }
@@ -2502,12 +2534,11 @@
     }
 
     @media (max-width: 850px) {
-        height: 2050px;
+        height: 1870px;
         background-position: bottom;
-        background-size: cover;
+        background-size: 101% 101%;
 
-        &--title {
-            margin-top: 76px;
+        &--title {            
             height: 68px;
             font-size: 22px;
             line-height: 138.6%;
@@ -2574,7 +2605,7 @@
                 margin-top: 312px;
 
                 :last-child {
-                    margin-top: 26px;
+                    margin-top: 28px;
                 }
             }
         }
@@ -2684,6 +2715,7 @@
             display: inline-block;            
             margin-top: 58px;
             display: inline-flex;
+            box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5);
 
             span {
                 align-self: center;
@@ -2704,6 +2736,7 @@
             border-left: 1px solid white;            
             margin-top: 58px;
             display: inline-flex;
+            box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5);
 
             span {
                 align-self: center;
@@ -2737,6 +2770,12 @@
         }
     }
 
+    @media (max-width: 850px){
+        &--title {
+            padding-top: 20px;
+        }
+    }
+
     @media (max-width: 620px) {
         &--clients > div:nth-child(2) {
             display: none;
@@ -2757,32 +2796,32 @@
 }
 
 .ninth_block_questions {
-    height: 1308px;
-    background-color: white;
+    height: 1180px;
+    background-color: #fdfdfd;
     background-image: url('/source/images/block9/b9 bg-img.png'), url('/source/images/block9/b9 bg-top left.png'), url('/source/images/block9/b9 bg-top right.png');
     background-repeat: no-repeat;
     background-position: top 355px left 0px, bottom 935px left 0, bottom 935px left 720px;
-    background-size: cover, auto, auto;    
+    background-size: cover, auto, auto;
+    padding-top: 128px;
 
     &--any {
         background-color: #181818;
+        padding-top: 34px;
         width: 62%;
         min-width: 520px;
-        height: 445px;
+        height: 411px;
         margin: 0 auto;
-        margin-top: 132px;
 
         > div {
             width: 520px;
             height: 377px;
             margin: 0 auto;
-            margin-top: 35px;
         }
 
         &-title {
-            .yesevaOne-font(#FFFFFF, 20px, 28px);            
+            .yesevaOne-font(#FFFFFF, 20px, 28px);
             text-align: center;
-            text-transform: uppercase;            
+            text-transform: uppercase;
             height: 26px;
         }
 
@@ -2792,7 +2831,7 @@
             flex-direction: column;
 
             label {
-                .futuraBookC-font(rgba(255, 255, 255, 0.5), 15px, 20px);                
+                .futuraBookC-font(rgba(255, 255, 255, 0.5), 15px, 20px);
             }
 
             &-info {
@@ -2810,7 +2849,7 @@
                 flex-direction: column;
 
                 input {
-                    .futuraBookC-font(#FFFFFF, 18px, 24px);                    
+                    .futuraBookC-font(#FFFFFF, 18px, 24px);
                     background-color: #181818;
                     border: 0;
                     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
@@ -2828,7 +2867,7 @@
                 .futuraBookC-font(#181818, 16px, 22px);
                 width: 300px;
                 margin: 0 auto;
-                margin-top: 47px;                
+                margin-top: 47px;
                 display: flex;
                 align-items: center;
                 cursor: pointer;
@@ -2891,8 +2930,8 @@
                 height: 51px;
                 margin-top: 50px;
                 background-color: #E3B873;
-                border: 0;                
-                text-transform: uppercase;                
+                border: 0;
+                text-transform: uppercase;
                 align-self: center;
                 box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.1);
             }
@@ -2914,9 +2953,9 @@
         .yesevaOne-font(#E3B873, 20px, 28px);
         width: 580px;
         height: 105px;
-        margin: 0 auto;        
+        margin: 0 auto;
         text-align: center;
-        text-transform: uppercase;        
+        text-transform: uppercase;
         margin-top: 52px;
 
         a {
@@ -2929,11 +2968,11 @@
         }
     }
 
-    &--icons {                
+    &--icons {
         height: 28px;
         width: 71px;
         margin: 0 auto;
-        margin-top: 26px;        
+        margin-top: 26px;
         display: flex;
         justify-content: space-between;
 
@@ -2953,9 +2992,9 @@
 
         &-left:hover {
             margin-left: 5px;
-            cursor: pointer;        
+            cursor: pointer;
             border: 1px solid crimson;
-            border-radius: 50%;    
+            border-radius: 50%;
         }
 
         &-right:hover {
@@ -2980,8 +3019,6 @@
     }
 
     @media (max-width: 1100px) {
-        height: 1200px;
-        background-position: top 355px left 0px, bottom 827px left 0, bottom 827px left 720px;
     }
 
     @media (max-width: 850px) {
@@ -2997,8 +3034,7 @@
         display: flex;
         flex-direction: column;
 
-        &--any {
-            margin-top: 76px;
+        &--any {          
             width: 100%;
             min-width: 375px;
             height: 500px;
@@ -3065,14 +3101,29 @@
             }
         }
 
-        &--icons {
-            background-image: url('/source/images/block9/b9 icon left min.png'), url('/source/images/block9/b9 icon right min.png');
-            background-repeat: no-repeat;
-            background-position: left, right;
-            height: 39px;
-            width: 99px;
-            margin: 0 auto;
+        &--icons {            
+            width: 100px;            
             margin-top: 24px;
+            display: flex;
+            justify-content: space-between;
+
+            &-left {
+                background-image: url('/source/images/block9/b9 icon left min.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 39px;
+                width: 39px;
+                transition: 0.5s all;
+            }
+
+            &-right {
+                background-image: url('/source/images/block9/b9 icon right min.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 39px;
+                width: 40px;
+                transition: 0.5s all;
+            }
         }
 
         &--map {
@@ -3082,9 +3133,13 @@
     }
 
     @media (max-width: 375px) {
-        height: 1090px;
+        height: 1050px;
         background-image: none;
-        background-color: #181818;
+        background-image: url('/source/images/block6/b6 bg.png');
+        background-size: 102% 102%;
+        margin-top: 0;
+        padding: 0;
+        margin-top: -10px;
 
         &--map {
             min-width: 90%;
