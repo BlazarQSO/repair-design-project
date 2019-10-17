@@ -212,22 +212,22 @@
                 case "first-position": {
                     slider.classList.remove("first-position");
                     slider.classList.add("third-position");
-                    document.getElementById("btn-slider-second_block-cirlce1").style.backgroundColor = "rgba(255, 255, 255, 0.3)";
-                    document.getElementById("btn-slider-second_block-cirlce3").style.backgroundColor = "rgba(255, 255, 255, 1)";
+                    document.getElementById("btn-slider-second_block-circle1").style.backgroundColor = "rgba(255, 255, 255, 0.3)";
+                    document.getElementById("btn-slider-second_block-circle3").style.backgroundColor = "rgba(255, 255, 255, 1)";
                     break;
                 }
                 case "second-position": {
                     slider.classList.remove("second-position");
                     slider.classList.add("first-position");
-                    document.getElementById("btn-slider-second_block-cirlce2").style.backgroundColor = "rgba(255, 255, 255, 0.3)";
-                    document.getElementById("btn-slider-second_block-cirlce1").style.backgroundColor = "rgba(255, 255, 255, 1)";
+                    document.getElementById("btn-slider-second_block-circle2").style.backgroundColor = "rgba(255, 255, 255, 0.3)";
+                    document.getElementById("btn-slider-second_block-circle1").style.backgroundColor = "rgba(255, 255, 255, 1)";
                     break;
                 }
                 case "third-position": {
                     slider.classList.remove("third-position");
                     slider.classList.add("second-position");
-                    document.getElementById("btn-slider-second_block-cirlce3").style.backgroundColor = "rgba(255, 255, 255, 0.3)";
-                    document.getElementById("btn-slider-second_block-cirlce2").style.backgroundColor = "rgba(255, 255, 255, 1)";
+                    document.getElementById("btn-slider-second_block-circle3").style.backgroundColor = "rgba(255, 255, 255, 0.3)";
+                    document.getElementById("btn-slider-second_block-circle2").style.backgroundColor = "rgba(255, 255, 255, 1)";
                     break;
                 }
             }

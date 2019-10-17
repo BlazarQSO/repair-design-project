@@ -44,7 +44,7 @@
     margin: 0 auto;
 
     @media (max-width: 375px){
-        min-width: 375px;
+        min-width: 374px;
     }
 }
 
@@ -204,6 +204,10 @@
 
 .footer {
     height: 133px;
+    
+    @media (max-width: 600px){    
+            
+    }
 
     @media (max-width: 375px) {
         display: none;
@@ -214,7 +218,7 @@
     .futuraDemiC-font(#FFFFFF, 13px, 15px);
     height: 755px;
     background-image: url('/source/images/block3/b3 bg.png');
-    background-size: 101% 101%;
+    background-size: cover;
     display: flex;       
 
     &--aside {
@@ -864,13 +868,9 @@
         margin: 0 auto;
         margin-top: 21px;
         position: relative;
-
+      
         video {
             width: 100%;
-        }
-
-        video[poster] {                  
-            
         }
 
         &-play {
@@ -1188,6 +1188,8 @@
 
     @media (max-width: 375px) {
         height: 901px;
+        background-image: none;
+        background-color: #181818;
     }
 }
 
@@ -1862,7 +1864,7 @@
     height: 1740px;
     background-image: url('/source/images/block6/b6 bg.png');
     background-position: center top 579px;
-    background-size: 101% 101%;
+    background-size: cover;
     background-repeat: no-repeat;
 
     &--title {
@@ -2306,6 +2308,8 @@
 
     @media (max-width: 375px) {
         height: 1840px;
+        background-image: none;
+        background-color: #181818;
 
         &--title {
             height: 71px;
@@ -2559,11 +2563,12 @@
         }
 
         &--text2, &--text3 {
-            width: 370px;
+            width: 356px;
             font-size: 15px;
             line-height: 20px;
             text-align: center;
             color: #FFFFFF;
+            letter-spacing: -0.05ex;
         }
 
         &--experts {
@@ -2613,7 +2618,8 @@
 
     @media (max-width: 375px) {
         height: 1710px;
-
+        background-image: none;
+        background-color: #181818;
         &--vect1, &--vect2,
         &--text2, &--text3 {
             display: none;
@@ -2636,8 +2642,8 @@
     }
 
     &--text {
-        .yesevaOne-font(#363636, 20px, 27px);
-        width: 376px;
+        .futuraBookC-font(#363636, 20px, 27px);
+        width: 356px;
         height: 57px;        
         text-align: center;        
         margin: 0 auto;
@@ -2980,14 +2986,14 @@
             background-image: url('/source/images/block9/b9 icon left.png');
             height: 28px;
             width: 28px;
-            transition: 0.5s all;
+            transition: border-radius margin 0.5s;
         }
 
         &-right {
             background-image: url('/source/images/block9/b9 icon right.png');
             height: 28px;
             width: 28px;
-            transition: 0.5s all;
+            transition: border-radius margin 0.5s;
         }
 
         &-left:hover {
@@ -3018,9 +3024,6 @@
         margin-top: 43px;
     }
 
-    @media (max-width: 1100px) {
-    }
-
     @media (max-width: 850px) {
         &--map {
             min-height: 80px;
@@ -3036,7 +3039,7 @@
 
         &--any {          
             width: 100%;
-            min-width: 375px;
+            min-width: 350px;
             height: 500px;
 
             > div {
@@ -3128,18 +3131,19 @@
 
         &--map {
             order: 1;
-            margin-top: 46px;
+            margin-top: 46px;      
+            @supports (-ms-ime-align:auto) {                
+                padding-bottom: 20%;
+            }
         }
     }
 
     @media (max-width: 375px) {
         height: 1050px;
         background-image: none;
-        background-image: url('/source/images/block6/b6 bg.png');
-        background-size: 102% 102%;
+        background-color: #181818;
         margin-top: 0;
-        padding: 0;
-        margin-top: -10px;
+        padding: 0;       
 
         &--map {
             min-width: 90%;
@@ -3150,7 +3154,7 @@
         }
 
         &--any {
-            width: 375px;
+            width: 360px;
         }
     }
 }
